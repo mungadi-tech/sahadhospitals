@@ -1,0 +1,192 @@
+query Users($id: ID) {
+  users(id: $id) {
+    edges {
+      node {
+        id
+        username
+        email
+        firstName
+        middleName
+        avatar
+        resume
+        lastName
+        lastLogin
+        isSuperuser
+        isStaff
+        isActive
+      }
+    }
+  }
+}
+
+query AuthUser {
+  authUser {
+    id
+    username
+    email
+    firstName
+    lastName
+    middleName
+    avatar
+    resume
+    lastLogin
+    isSuperuser
+    isStaff
+    isActive
+  }
+}
+
+query Jobs(
+  $id: ID
+  $publish: Boolean
+  $isOpen: Boolean
+  $isClosed: Boolean
+  $isCompleted: Boolean
+) {
+  jobs(
+    id: $id
+    publish: $publish
+    isOpen: $isOpen
+    isClosed: $isClosed
+    isCompleted: $isCompleted
+  ) {
+    edges {
+      node {
+        id
+        dateCreated
+        title
+        staffQuantity
+        description
+        location
+        publish
+        isOpen
+        isClosed
+        isCompleted
+        jobType {
+          edges {
+            node {
+              id
+              type
+            }
+          }
+        }
+        role {
+          edges {
+            node {
+              id
+              role
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query JobTypes($id: ID, $type: String) {
+  jobTypes(id: $id, type: $type) {
+    edges {
+      node {
+        id
+        type
+      }
+    }
+  }
+}
+
+query Roles($id: ID, $role: String) {
+  roles(id: $id, role: $role) {
+    edges {
+      node {
+        id
+        role
+      }
+    }
+  }
+}
+
+query InterviewAnswers($id: ID, $user: ID) {
+  interviewAnswers(id: $id, user: $user) {
+    edges {
+      node {
+        id
+        answer
+        question {
+          id
+          question
+          optionA
+          optionB
+          optionC
+          optionD
+          answer
+        }
+      }
+    }
+  }
+}
+
+query InterviewQuestions($id: ID, $job: ID) {
+  interviewQuestions(id: $id, job: $job) {
+    edges {
+      node {
+        id
+        question
+        optionA
+        optionB
+        optionC
+        optionD
+        answer
+        job {
+          id
+          isOpen
+          isClosed
+          isCompleted
+        }
+      }
+    }
+  }
+}
+
+query Recruited($id: ID, $job: ID) {
+  recruited(id: $id, job: $job) {
+    edges {
+      node {
+        id
+        date
+        note
+        user {
+          id
+          email
+        }
+        job {
+          id
+          isClosed
+          isCompleted
+          publish
+          isOpen
+          dateCreated
+          title
+          location
+          staffQuantity
+          description
+          role {
+            edges {
+              node {
+                id
+                role
+              }
+            }
+          }
+          jobType {
+            edges {
+              node {
+                id
+                type
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

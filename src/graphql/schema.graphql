@@ -1,0 +1,510 @@
+type Query {
+  users(offset: Int, before: String, after: String, first: Int, last: Int, id: ID): UsersTypeConnection
+  authUser: UsersType
+  interviewQuestions(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): InterviewQuestionsTypeConnection
+  interviewAnswers(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, user: ID): InterviewAnswersTypeConnection
+  jobTypes(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, type: String): JobTypesTypeConnection
+  jobs(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, publish: Boolean, isOpen: Boolean, isClosed: Boolean, isCompleted: Boolean): JobsTypeConnection
+  roles(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, role: String): RolesTypeConnection
+  recruited(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): RecruitedTypeConnection
+}
+
+type UsersTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [UsersTypeEdge]!
+}
+
+"""
+The Relay compliant `PageInfo` type, containing data necessary to paginate this connection.
+"""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+"""A Relay edge containing a `UsersType` and its cursor."""
+type UsersTypeEdge {
+  """The item at the end of the edge"""
+  node: UsersType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type UsersType {
+  id: ID!
+  password: String!
+  lastLogin: DateTime
+
+  """
+  Designates that this user has all permissions without explicitly assigning them.
+  """
+  isSuperuser: Boolean!
+
+  """Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."""
+  username: String!
+  firstName: String!
+  lastName: String!
+
+  """Designates whether the user can log into this admin site."""
+  isStaff: Boolean!
+
+  """
+  Designates whether this user should be treated as active. Unselect this instead of deleting accounts.
+  """
+  isActive: Boolean!
+  dateJoined: DateTime!
+  email: String!
+  middleName: String!
+  avatar: String!
+  resume: String!
+  recruitedSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): RecruitedTypeConnection!
+  interviewanswersSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, user: ID): InterviewAnswersTypeConnection!
+}
+
+"""
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+type RecruitedTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [RecruitedTypeEdge]!
+}
+
+"""A Relay edge containing a `RecruitedType` and its cursor."""
+type RecruitedTypeEdge {
+  """The item at the end of the edge"""
+  node: RecruitedType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type RecruitedType {
+  id: ID!
+  date: DateTime!
+  user: RequestType!
+  job: JobsType!
+  note: String!
+}
+
+type RequestType {
+  id: ID!
+  password: String!
+  lastLogin: DateTime
+
+  """
+  Designates that this user has all permissions without explicitly assigning them.
+  """
+  isSuperuser: Boolean!
+
+  """Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."""
+  username: String!
+  firstName: String!
+  lastName: String!
+
+  """Designates whether the user can log into this admin site."""
+  isStaff: Boolean!
+
+  """
+  Designates whether this user should be treated as active. Unselect this instead of deleting accounts.
+  """
+  isActive: Boolean!
+  dateJoined: DateTime!
+  email: String!
+  middleName: String!
+  avatar: String!
+  resume: String!
+  recruitedSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): RecruitedTypeConnection!
+  interviewanswersSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, user: ID): InterviewAnswersTypeConnection!
+}
+
+type InterviewAnswersTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [InterviewAnswersTypeEdge]!
+}
+
+"""A Relay edge containing a `InterviewAnswersType` and its cursor."""
+type InterviewAnswersTypeEdge {
+  """The item at the end of the edge"""
+  node: InterviewAnswersType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type InterviewAnswersType {
+  id: ID!
+  user: RequestType!
+  question: InterviewQuestionsType!
+  answer: InterviewInterviewAnswersAnswerChoices!
+}
+
+type InterviewQuestionsType {
+  id: ID!
+  job: JobsType!
+  question: String!
+  optionA: String!
+  optionB: String!
+  optionC: String!
+  optionD: String!
+  answer: InterviewInterviewQuestionsAnswerChoices!
+  interviewanswersSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, user: ID): InterviewAnswersTypeConnection!
+}
+
+type JobsType {
+  id: ID!
+  dateCreated: DateTime!
+  title: String!
+  role(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, role: String): RolesTypeConnection!
+  jobType(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, type: String): JobTypesTypeConnection!
+  location: String!
+  staffQuantity: Int!
+  description: String!
+  publish: Boolean!
+  isOpen: Boolean!
+  isClosed: Boolean!
+  isCompleted: Boolean!
+  recruitedSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): RecruitedTypeConnection!
+  interviewquestionsSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, job: ID): InterviewQuestionsTypeConnection!
+}
+
+type RolesTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [RolesTypeEdge]!
+}
+
+"""A Relay edge containing a `RolesType` and its cursor."""
+type RolesTypeEdge {
+  """The item at the end of the edge"""
+  node: RolesType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type RolesType {
+  id: ID!
+  role: String!
+  jobsSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, publish: Boolean, isOpen: Boolean, isClosed: Boolean, isCompleted: Boolean): JobsTypeConnection!
+}
+
+type JobsTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [JobsTypeEdge]!
+}
+
+"""A Relay edge containing a `JobsType` and its cursor."""
+type JobsTypeEdge {
+  """The item at the end of the edge"""
+  node: JobsType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type JobTypesTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [JobTypesTypeEdge]!
+}
+
+"""A Relay edge containing a `JobTypesType` and its cursor."""
+type JobTypesTypeEdge {
+  """The item at the end of the edge"""
+  node: JobTypesType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+type JobTypesType {
+  id: ID!
+  type: String!
+  jobsSet(offset: Int, before: String, after: String, first: Int, last: Int, id: ID, publish: Boolean, isOpen: Boolean, isClosed: Boolean, isCompleted: Boolean): JobsTypeConnection!
+}
+
+type InterviewQuestionsTypeConnection {
+  """Pagination data for this connection."""
+  pageInfo: PageInfo!
+
+  """Contains the nodes in this connection."""
+  edges: [InterviewQuestionsTypeEdge]!
+}
+
+"""A Relay edge containing a `InterviewQuestionsType` and its cursor."""
+type InterviewQuestionsTypeEdge {
+  """The item at the end of the edge"""
+  node: InterviewQuestionsType
+
+  """A cursor for use in pagination"""
+  cursor: String!
+}
+
+"""An enumeration."""
+enum InterviewInterviewQuestionsAnswerChoices {
+  """A"""
+  A
+
+  """B"""
+  B
+
+  """C"""
+  C
+
+  """D"""
+  D
+}
+
+"""An enumeration."""
+enum InterviewInterviewAnswersAnswerChoices {
+  """A"""
+  A
+
+  """B"""
+  B
+
+  """C"""
+  C
+
+  """D"""
+  D
+}
+
+type Mutation {
+  newUser(input: NewUserMutationInput!): NewUserMutationPayload
+  updateUser(input: UpdateUserMutationInput!): UpdateUserMutationPayload
+  updateInterviewQuestion(input: InterviewQuestionsMutationInput!): InterviewQuestionsMutationPayload
+  updateInterviewAnswer(input: InterviewAnswerMutationInput!): InterviewAnswerMutationPayload
+  updateJobs(input: JobsMutationInput!): JobsMutationPayload
+  updateJobTypes(input: JobTypesMutationInput!): JobTypesMutationPayload
+  updateRoles(input: RolesMutationInput!): RolesMutationPayload
+  updateRecruited(input: RecruitedMutationInput!): RecruitedMutationPayload
+
+  """Obtain JSON Web Token mutation"""
+  login(email: String!, password: String!): ObtainJSONWebToken
+  verifyToken(token: String): Verify
+  refreshToken(token: String): Refresh
+  deleteTokenCookie: DeleteJSONWebTokenCookie
+  deleteRefreshTokenCookie: DeleteRefreshTokenCookie
+}
+
+type NewUserMutationPayload {
+  users: RequestType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+type ErrorType {
+  field: String!
+  messages: [String!]!
+}
+
+input NewUserMutationInput {
+  avatar: String
+
+  """Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."""
+  username: String!
+  firstName: String
+  middleName: String
+  lastName: String
+  resume: String
+  email: String!
+
+  """
+  <ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul>
+  """
+  password1: String!
+
+  """Enter the same password as before, for verification."""
+  password2: String!
+  id: ID
+  clientMutationId: String
+}
+
+type UpdateUserMutationPayload {
+  users: RequestType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input UpdateUserMutationInput {
+  avatar: String
+
+  """Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."""
+  username: String!
+  firstName: String
+  middleName: String
+  lastName: String
+  resume: String
+  email: String!
+
+  """
+  Designates whether this user should be treated as active. Unselect this instead of deleting accounts.
+  """
+  isActive: Boolean
+
+  """Designates whether the user can log into this admin site."""
+  isStaff: Boolean
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type InterviewQuestionsMutationPayload {
+  interviewQuestions: InterviewQuestionsType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input InterviewQuestionsMutationInput {
+  job: ID!
+  question: String!
+  optionA: String!
+  optionB: String!
+  optionC: String!
+  optionD: String!
+  answer: String!
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type InterviewAnswerMutationPayload {
+  interviewAnswers: InterviewAnswersType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input InterviewAnswerMutationInput {
+  user: ID!
+  question: ID!
+  answer: String!
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type JobsMutationPayload {
+  jobs: JobsType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input JobsMutationInput {
+  title: String!
+  role: [ID]!
+  jobType: [ID]!
+  location: String!
+  staffQuantity: Int!
+  description: String!
+  publish: Boolean
+  isOpen: Boolean
+  isClosed: Boolean
+  isCompleted: Boolean
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type JobTypesMutationPayload {
+  jobTypes: JobTypesType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input JobTypesMutationInput {
+  type: String!
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type RolesMutationPayload {
+  roles: RolesType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input RolesMutationInput {
+  role: String!
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+type RecruitedMutationPayload {
+  recruited: RecruitedType
+  errors: [ErrorType!]!
+  clientMutationId: String
+}
+
+input RecruitedMutationInput {
+  user: ID!
+  job: ID!
+  note: String!
+  shouldDelete: Boolean
+  id: ID
+  clientMutationId: String
+}
+
+"""Obtain JSON Web Token mutation"""
+type ObtainJSONWebToken {
+  payload: GenericScalar!
+  refreshExpiresIn: Int!
+  token: String!
+}
+
+"""
+The `GenericScalar` scalar type represents a generic
+GraphQL scalar value that could be:
+String, Boolean, Int, Float, List or Object.
+"""
+scalar GenericScalar
+
+type Verify {
+  payload: GenericScalar!
+}
+
+type Refresh {
+  payload: GenericScalar!
+  refreshExpiresIn: Int!
+  token: String!
+}
+
+type DeleteJSONWebTokenCookie {
+  deleted: Boolean!
+}
+
+type DeleteRefreshTokenCookie {
+  deleted: Boolean!
+}
