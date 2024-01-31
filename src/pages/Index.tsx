@@ -4,58 +4,12 @@ import { News } from "@/components/layout/News";
 import { Services } from "@/components/layout/Services";
 import { Surgeries } from "@/components/layout/Surgeries";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import new_image from "../assets/images/2150896634.jpg";
 import { Team } from "@/components/layout/Team";
 import { Link } from "react-router-dom";
-
-const formSchema = z.object({
-  fullName: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  email: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  specialization: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  doctor: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  mobileNumber: z
-    .string()
-    .min(11, {
-      message: "Username must be at least 2 characters.",
-    })
-    .max(11, { message: "Username must be at least 2 characters." }),
-});
+import { BookAppointmentForm } from "@/components/forms/BookAppointmentForm";
 
 export default function Index() {
-  const form = useForm({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullName: "",
-      email: "",
-      doctor: "",
-      mobileNumber: "",
-      specialization: "",
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
-
   return (
     <div>
       <Hero />
@@ -118,121 +72,7 @@ export default function Index() {
               </div>
             </div>
             <div className="bg-slate-200 p-4 rounded-lg">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)}>
-                  <div className="gap-x-4 gap-y-8 grid grid-cols-2">
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Full Name"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Email"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Phone Number"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="doctor"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              type="date"
-                              placeholder="Phone Number"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Specialization"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="fullName"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormControl>
-                            <Input
-                              placeholder="Select Doctor"
-                              className="bg-slate-300 h-14"
-                              {...field}
-                            />
-                          </FormControl>
-
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className="flex justify-end mt-8">
-                    <Button
-                      className="h-14 w-[15rem] font-bold text-xl rounded-full"
-                      type="submit"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </form>
-              </Form>
+              <BookAppointmentForm />
             </div>
           </div>
         </div>

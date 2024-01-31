@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import logo from "../../assets/images/logoWhite.png";
-import {
-  AlignJustify,
-  ChevronDown,
-  Facebook,
-  Linkedin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { AlignJustify, Facebook, Linkedin, Phone, Twitter } from "lucide-react";
 
 import {
   DropdownMenu,
@@ -31,7 +24,7 @@ const nav_links = [
   },
   {
     title: "SERVICES",
-    href: "service/",
+    href: "services/",
   },
   {
     title: "DEPARTMENT",
@@ -60,46 +53,11 @@ export const Header = () => {
               <li className="hover:underline">
                 <Link to={""}>HOME</Link>
               </li>
-              {nav_links.map((l, index) =>
-                index == 3 ? (
-                  <li className="hover:underline">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger>
-                        <div className="flex gap-1">
-                          <span>{l.title}</span>
-                          <ChevronDown className="w-4 -m-1" />
-                        </div>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="">
-                        <ul className="p-4">
-                          <Link
-                            to={"service/"}
-                            className="block text-muted-foreground text-sm space-y-1 hover:text-white rounded-md p-3 hover:bg-primary"
-                          >
-                            Medevolt Doctors
-                          </Link>
-                          <Link
-                            to={""}
-                            className="block text-muted-foreground text-sm space-y-1 hover:text-white rounded-md p-3 hover:bg-primary"
-                          >
-                            Medevolt Nursing
-                          </Link>
-                          <Link
-                            to={""}
-                            className="block text-muted-foreground text-sm space-y-1 hover:text-white rounded-md p-3 hover:bg-primary"
-                          >
-                            Medevolt Allied Health
-                          </Link>
-                        </ul>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </li>
-                ) : (
-                  <li className="hover:underline">
-                    <Link to={l.href}>{l.title}</Link>
-                  </li>
-                )
-              )}
+              {nav_links.map((l) => (
+                <li className="hover:underline">
+                  <Link to={l.href}>{l.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

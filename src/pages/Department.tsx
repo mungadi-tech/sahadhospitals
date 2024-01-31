@@ -1,16 +1,59 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  ArrowUp,
-  CalendarCheck,
-  Cog,
-  Heart,
-  PersonStanding,
-} from "lucide-react";
-import doctor from "../assets/images/doctors.jpg";
+import { Testimonials } from "@/components/layout/Testimonials";
+import { WhyRegister } from "@/components/layout/WhyRegister";
+import { Stethoscope } from "lucide-react";
+import dep from "../assets/images/dartments.jpg";
 
-export default function department() {
+const departments = [
+  {
+    title: "Surgical",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Cardiology",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "X-Ray",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Surgical",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Cardiology",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "X-Ray",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Dental",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Nephrology",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Gynaecology",
+    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    icon: Stethoscope,
+  },
+];
+export default function Department() {
   return (
     <>
       <NavbarWithBreadcrums />
@@ -20,52 +63,35 @@ export default function department() {
             SPECIALIST MEDICAL RECRUITMENT FOR DOCTORS
           </span>
           <p className=" mt-10 font-bold text-xl">
-            At MedeVolt Healthcare, our experts go the extra mile to find
-            doctors all over the country their next opportunity from medical
-            officer to consultant level
+            Sahad Hospitals' specialized departments, where expertise meets
+            compassion. From cutting-edge diagnostics to innovative treatments,
+            our dedicated teams ensure comprehensive care.
           </p>
           <p className=" font-bold mt-10 text-xl">
-            Our team understand that you're a unique specialist in your field
-            and as such, we believe your career deserves specialist attention
-            with service uniquely tailored for you
+            Whether it's cardiology, oncology, or any other field, trust us for
+            excellence. Your health, our commitment. Discover a healthier
+            tomorrow with Sahad Hospitals.
           </p>
           <Button className="mt-10">Book An Appointment</Button>
         </div>
       </div>
-      <div className="md:p-20 p-6">
-        <div className="grid w-[90%] mx-auto gap-4 place-content-center place-items-center  md:grid-cols-2">
-          <div className="">
-            <p className="text-3xl md:my-10 text-center md:text-left">
-              WHY REGISTER WITH MEDEVOLT HEALTHCARE?
-            </p>
-            <div className="place-items-center gap-4 grid md:grid-cols-2 mt-4">
-              <div className="flex items-center gap-4">
-                <Cog className=" h-24 w-24 text-info" />
-                Consultants of all specialties are now able to register for
-                remote working at the "Virtual Hospital"
-              </div>
-              <div className=" flex items-center gap-4">
-                <CalendarCheck className=" h-24 w-24 text-info" />
-                We have a variety of opportunities for flexible working, from
-                ad-hoc shifts to long term contracts.
-              </div>
-              <div className=" flex items-center gap-4">
-                <Heart className="h-24 w-24 text-info" />
-                The Beyond Expectations means not only competitive pay but
-                supporting you as person throughout your role
-              </div>
-              <div className=" flex items-center gap-4">
-                <ArrowUp className="h-24 w-24 text-info" />
-                Take the next step in your career with the help of our
-                dedicated, experienced, specialist teams.
-              </div>
+      <section className="md:flex mt-10">
+        <img src={dep} className="w-[30%]" />
+        <div className="grid md:grid-cols-3">
+          {departments.map((d) => (
+            <div className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-primary to-secondary hover:text-white">
+              {<d.icon className="size-10 text-info group-hover:text-white" />}
+              <span className="text-3xl font-bold text-gray-800 group-hover:text-white">
+                {d.title}
+              </span>
+              <p className="text-center text-xl text-gray-600 group-hover:text-white">
+                {d.content}
+              </p>
             </div>
-          </div>
-          <div className="">
-            <img className="rounded-xl" src={doctor} alt="" />
-          </div>
+          ))}
         </div>
-      </div>
+      </section>
+      <WhyRegister />
       <div className="bg-primary my-10 p-10">
         <p className="text-2xl text-center p-10 font-bold text-white">
           THANK YOU FOR CHOOSING MEDEVOLT HEALTHCARE
@@ -90,26 +116,3 @@ export default function department() {
     </>
   );
 }
-
-interface TestimonialsTypes {
-  name: string;
-  content: string;
-  title: string;
-}
-const Testimonials = ({ content, name, title }: TestimonialsTypes) => {
-  return (
-    <div className="p-4 text-white">
-      <div className="flex gap-2">
-        <PersonStanding className="h-24 w-96 bg-primary hidden md:block rounded-full" />
-
-        <div className="">
-          <span className="uppercase font-bold text-xl">{name}</span>
-          <br />
-          <span className="font-bold">{title}</span>
-          <br />
-          <p className="mt-4">{content}</p>
-        </div>
-      </div>
-    </div>
-  );
-};

@@ -1,6 +1,6 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import doctor from "../assets/images/doctors.jpg";
-import { Building, Pill, School } from "lucide-react";
+import { Building, Check, Pill, School } from "lucide-react";
 
 export default function About() {
   return (
@@ -63,18 +63,40 @@ export default function About() {
         </div>
         <CoreValues />
       </div>
-      <div className="grid md:grid-cols-2 gap-4 my-8 p-4">
-        <div>
-          <div className="my-8">
-            <h1 className="font-bold text-xl text-primary">WHAT WE OFFER</h1>
-            <span className="font-bold text-3xl md:text-4xl text-gray-600">
-              Our Advantages
-            </span>
+      <div className="grid md:grid-cols-2 gap-4 my-8 p-4 w-[90%] mx-auto">
+        <div className="my-8">
+          <h1 className="font-bold text-xl text-primary">WHAT WE OFFER</h1>
+          <span className="font-bold text-4xl text-gray-800">
+            Our Advantages
+          </span>
+          <div className="mt-6">
+            <p className="text-xl text-gray-600">
+              Sahad Hospitals offer cutting-edge technology, expert care, and
+              personalized service for superior healthcare. Trust our commitment
+              to excellence and comprehensive services for your well-being. Your
+              health, our priority.
+            </p>
+            <ul className="text-xl text-gray-600 mt-10 space-y-2">
+              <li className="flex gap-2 items-center">
+                <Check className="text-info" />
+                Specialists and Dentists as One Team
+              </li>
+              <li className="flex gap-2 items-center">
+                <Check className="text-info" />
+                Complimentary Consultations
+              </li>
+              <li className="flex gap-2 items-center">
+                <Check className="text-info" />
+                All Types of Dental Services
+              </li>
+              <li className="flex gap-2 items-center">
+                <Check className="text-info" />
+                On-site Laboratory
+              </li>
+            </ul>
           </div>
         </div>
-        <div>
-          <img className="w-full h-full" src={doctor} alt="" />
-        </div>
+        <img className="w-full h-full rounded-2xl" src={doctor} alt="" />
       </div>
     </div>
   );
