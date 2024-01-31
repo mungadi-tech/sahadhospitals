@@ -15,12 +15,10 @@ export function About() {
         </p>
       </div>
       <div>
-        <div className="grid md:grid-cols-2 mt-8">
+        <div className="grid md:grid-cols-2 mt-8 gap-4">
+          <img src={doctor} alt="" />
           <div>
-            <img src={doctor} alt="" />
-          </div>
-          <div>
-            <h1 className="text-3xl my-8 md:my-0 font-bold text-gray-600 mb-4">
+            <h1 className="text-3xl mb-4 font-bold text-gray-600">
               The Best Medics, Doctors & Physicians
             </h1>
             <article className="mb-4 text-xl text-gray-600">
