@@ -1,10 +1,10 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Testimonials } from "@/components/layout/Testimonials";
 import { WhyRegister } from "@/components/layout/WhyRegister";
 import { Stethoscope } from "lucide-react";
 import dep from "../assets/images/dartments.jpg";
+import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 
 const departments = [
   {
@@ -57,24 +57,16 @@ export default function Department() {
   return (
     <>
       <NavbarWithBreadcrums />
-      <div className="bg-info text-center p-8 text-white">
-        <div className="md:w-2/3 mx-auto">
-          <span className=" font-extrabold text-3xl">
-            SPECIALIST MEDICAL RECRUITMENT FOR DOCTORS
-          </span>
-          <p className=" mt-10 font-bold text-xl">
-            Sahad Hospitals' specialized departments, where expertise meets
-            compassion. From cutting-edge diagnostics to innovative treatments,
-            our dedicated teams ensure comprehensive care.
-          </p>
-          <p className=" font-bold mt-10 text-xl">
-            Whether it's cardiology, oncology, or any other field, trust us for
+      <BookAnAppointment
+        heading=""
+        content2="Whether it's cardiology, oncology, or any other field, trust us for
             excellence. Your health, our commitment. Discover a healthier
-            tomorrow with Sahad Hospitals.
-          </p>
-          <Button className="mt-10">Book An Appointment</Button>
-        </div>
-      </div>
+            tomorrow with Sahad Hospitals."
+        content1="Sahad Hospitals' specialized departments, where expertise meets
+            compassion. From cutting-edge diagnostics to innovative treatments,
+            our dedicated teams ensure comprehensive care."
+      />
+
       <section className="md:flex mt-10">
         <img src={dep} className="w-[30%]" />
         <div className="grid md:grid-cols-3">

@@ -63,15 +63,17 @@ export default function Index() {
               on your journey towards a healthier, happier life. Your well-being
               is our priority.
               <div className="mt-8">
-                <Button
-                  variant={"outline"}
-                  className="w-[10rem] font-bold text-xl bg-slate-200/30 h-[3rem] rounded-full hover:bg-transparent hover:text-white"
-                >
-                  Contact Us
-                </Button>
+                <Link to={"contact/"}>
+                  <Button
+                    variant={"outline"}
+                    className="w-[10rem] font-bold text-xl bg-slate-200/30 h-[3rem] rounded-full hover:bg-transparent hover:text-white"
+                  >
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
-            <div className="bg-slate-200 p-4 rounded-lg">
+            <div id="appointment" className="bg-slate-200 p-4 rounded-lg">
               <BookAppointmentForm />
             </div>
           </div>

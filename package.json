@@ -11,7 +11,7 @@
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
-    "@apollo/client": "^3.8.8",
+    "@apollo/client": "^3.9.4",
     "@headlessui/react": "^1.7.18",
     "@hookform/resolvers": "^3.3.4",
     "@mantine/hooks": "^7.4.1",
@@ -35,6 +35,7 @@
     "clsx": "^2.1.0",
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
+    "framer-motion": "^11.0.3",
     "graphql": "^16.8.1",
     "lucide-react": "^0.307.0",
     "next-themes": "^0.2.1",
@@ -51,7 +52,7 @@
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.0",
     "@graphql-codegen/client-preset": "4.1.0",
-    "@parcel/watcher": "^2.3.0",
+    "@parcel/watcher": "^2.4.0",
     "@types/node": "^20.10.7",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",

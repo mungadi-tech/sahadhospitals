@@ -1,6 +1,6 @@
 import { ContactUsForm } from "@/components/forms/ContactUsForm";
+import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
-import { Button } from "@/components/ui/button";
 import { Cable, MailPlus, MapPin, Phone } from "lucide-react";
 
 const info = [
@@ -30,23 +30,15 @@ export const Contact = () => {
   return (
     <>
       <NavbarWithBreadcrums />
-      <div className="bg-info text-center p-8 text-white">
-        <div className="md:w-2/3 mx-auto">
-          <span className=" font-extrabold text-3xl">
-            SPECIALIST MEDICAL RECRUITMENT FOR DOCTORS
-          </span>
-          <p className=" mt-10 font-bold text-xl">
-            Discover exceptional healthcare at Sahad Hospitals – a trusted name
+      <BookAnAppointment
+        heading="SPECIALIST MEDICAL RECRUITMENT FOR DOCTORS"
+        content1="Discover exceptional healthcare at Sahad Hospitals – a trusted name
             in medical excellence. Our state-of-the-art facilities and dedicated
-            healthcare professionals ensure top-notch care.
-          </p>
-          <p className=" font-bold mt-10 text-xl">
-            Experience personalized service with just a click! Book an
+            healthcare professionals ensure top-notch care."
+        content2="Experience personalized service with just a click! Book an
             appointment now for your well-being. Your health, our priority.
-          </p>
-          <Button className="mt-10">Book An Appointment</Button>
-        </div>
-      </div>
+        "
+      />
 
       <section className="grid md:grid-cols-2 gap-4 my-14 p-4 w-[90%] mx-auto">
         <div className="flex flex-col gap-2">

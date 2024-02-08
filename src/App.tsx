@@ -6,9 +6,9 @@ import About from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { Toaster } from "sonner";
 import Services from "./pages/Services";
-import Dashboard from "./pages/admin/Dashboard";
 import Department from "./pages/Department";
 import Team from "./pages/Team";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -17,11 +17,11 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route element={<Index />} path="/" />
-          <Route element={<Dashboard />} path="dashboard/" />
           <Route element={<About />} path="about/" />
           <Route element={<Department />} path="department/" />
           <Route element={<Contact />} path="contact/" />
           <Route element={<Services />} path="services/" />
+          <Route element={<Gallery />} path="gallery/" />
           <Route element={<Team />} path="team/" />
         </Route>
       </Routes>

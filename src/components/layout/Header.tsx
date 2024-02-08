@@ -16,7 +16,7 @@ const nav_links = [
   },
   {
     title: "GALLERY",
-    href: "#gallery",
+    href: "gallery/",
   },
   {
     title: "OUR TEAM",
