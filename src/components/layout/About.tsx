@@ -4,7 +4,7 @@ import doctor from "../../assets/images/doctors.jpg";
 
 export function About() {
   return (
-    <div className="my-14 p-4 w-[90%] mx-auto">
+    <div className="my-14 p-4 md:w-[90%] mx-auto">
       <div className="flex justify-center flex-col">
         <h1 className="uppercase text-4xl  inline-flex font-bold justify-center text-gray-700">
           About Us

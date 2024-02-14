@@ -1,5 +1,4 @@
 import { BookAppointmentModalForm } from "../forms/BookAppointmentForm";
-import { Button } from "../ui/button";
 
 interface BookAnAppointmentprops {
   heading: string;

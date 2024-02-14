@@ -1,4 +1,4 @@
-.hero__image {
+/* .hero__image {
   background: url(assets/images/hero1.jpg) no-repeat;
   height: 40rem;
   width: 100%;
@@ -20,7 +20,7 @@
   width: 100%;
   background-size: cover;
   border-radius: 1.5rem;
-}
+} */
 
 .__footer {
   background: url(assets/images/footer.png) no-repeat;

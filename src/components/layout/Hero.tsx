@@ -2,24 +2,49 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
+import hero1 from "../../assets/images/hero1.jpg";
+import hero2 from "../../assets/images/hero2.jpg";
+import hero3 from "../../assets/images/hero3.jpg";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className="bg-info p-4 md:h-[45rem] flex justify-center items-center -mt-2 md:-mt-10">
-      <div className="w-full md:-mt-[10rem] flex justify-center">
-        <HeroCarousel />
-      </div>
+    <div className="bg-info p-4 flex justify-center items-center">
+      <HeroCarousel />
     </div>
   );
 };
 
 function HeroCarousel() {
+  const c_images = [
+    {
+      headline: "WELCOME TO SAHAD HOSPITALS",
+      slogan: "Affordable Healthcare for All",
+      link: "",
+      image: hero1,
+    },
+    {
+      headline: "WELCOME TO SAHAD HOSPITALS",
+      slogan: "Affordable Healthcare for All",
+      link: "",
+      image: hero2,
+    },
+    {
+      headline: "WELCOME TO SAHAD HOSPITALS",
+      slogan: "Affordable Healthcare for All",
+      link: "",
+      image: hero3,
+    },
+  ];
+
   return (
     <Carousel
-      className="w-[90%]"
+      className="md:w-[90%] w-[100%]"
       plugins={[
         Autoplay({
           delay: 2000,
@@ -27,69 +52,31 @@ function HeroCarousel() {
       ]}
     >
       <CarouselContent>
-        <CarouselItem className="rounded-3xl">
-          <div className="hero__image md:mt-[200px] filter brightness-90">
-            <div className="absolute bg-slate-700/50 font-bold w-full rounded-3xl  h-full flex flex-col justify-center md:gap-4 p-4">
-              <div>
-                <span className="text-3xl md:text-[3rem] text-white">
-                  WELCOME TO SAHAD HOSPITALS
+        {c_images.map((i) => (
+          <CarouselItem className="mx-1">
+            <div className="flex md:h-[35rem] h-96  text-white">
+              <img
+                src={i.image}
+                alt=""
+                className="absolute w-full h-full rounded-3xl"
+              />
+              <div className="relative h-fit my-auto mx-4 md:mx-auto backdrop-blur-sm bg-slate-800/30 font-bold flex flex-col justify-center md:gap-4 p-4 items-center">
+                <span className="text-4xl md:text-[3rem] text-center">
+                  {i.headline}
                 </span>
-                <br />
-                <span className="md:text-3xl text-md text-white">
-                  Affordable Healthcare for All
-                </span>
-              </div>
-              <div>
-                <Button className="mt-4 h-16  md:w-60 text-2xl rounded-full opacity-80">
-                  READ MORE...
-                </Button>
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
-        <CarouselItem className="rounded-3xl">
-          <div className="hero__image2 md:mt-[200px]">
-            <div className="absolute bg-slate-700/50 font-bold w-full rounded-3xl  h-full flex flex-col justify-center md:gap-4 p-4">
-              <div>
-                <span className="text-3xl md:text-[3rem] text-white">
-                  WELCOME TO SAHAD HOSPITALS
-                </span>
-                <br />
-                <span className="md:text-3xl text-md text-white">
-                  Affordable Healthcare for All
-                </span>
-              </div>
-              <div>
-                <Button className="mt-4 h-16  md:w-60 text-2xl rounded-full opacity-80">
-                  READ MORE...
-                </Button>
+                <span className="md:text-3xl text-md">{i.slogan}</span>
+                <Link to={"about/"}>
+                  <Button className="mt-4 h-16 p-8 md:w-60 text-2xl rounded-full opacity-80">
+                    READ MORE...
+                  </Button>
+                </Link>
               </div>
             </div>
-          </div>
-        </CarouselItem>
-        <CarouselItem className="rounded-3xl">
-          <div className="hero__image3 md:mt-[200px]">
-            <div className="absolute bg-slate-700/50 font-bold w-full rounded-3xl  h-full flex flex-col justify-center md:gap-4 p-4">
-              <div>
-                <span className="text-3xl md:text-[3rem] text-white">
-                  WELCOME TO SAHAD HOSPITALS
-                </span>
-                <br />
-                <span className="md:text-3xl text-md text-white">
-                  Affordable Healthcare for All
-                </span>
-              </div>
-              <div>
-                <Button className="mt-4 h-16  md:w-60 text-2xl rounded-full opacity-80">
-                  READ MORE...
-                </Button>
-              </div>
-            </div>
-          </div>
-        </CarouselItem>
+          </CarouselItem>
+        ))}
       </CarouselContent>
-      {/* <CarouselPrevious />
-      <CarouselNext /> */}
+      <CarouselPrevious />
+      <CarouselNext />
     </Carousel>
   );
 }

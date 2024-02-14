@@ -11,7 +11,7 @@ import { BookAppointmentForm } from "@/components/forms/BookAppointmentForm";
 
 export default function Index() {
   return (
-    <div>
+    <>
       <Hero />
       <About />
       <section className="p-2">
@@ -126,6 +126,6 @@ export default function Index() {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 }
