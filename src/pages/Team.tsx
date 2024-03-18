@@ -1,6 +1,10 @@
 import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import { Team as T } from "@/components/layout/Team";
+import cmd from "../assets/images/cmd.jpg";
+import gmb from "../assets/images/gmb.jpg";
+import gmf from "../assets/images/gmf.jpg";
+import vc from "../assets/images/vc.jpg";
 import new_image from "../assets/images/2150896634.jpg";
 
 export default function Team() {
@@ -22,35 +26,59 @@ export default function Team() {
         </div>
         <div className="grid md:grid-cols-4 gap-4 p-4">
           <T
-            facebook=""
-            image={new_image}
+            image={cmd}
             linkedln=""
-            name="John Doe"
-            title="MD"
+            name="Alh Ibrahim Mijinyawa"
+            title="Chairman "
             twitter=""
           />
           <T
-            facebook=""
-            image={new_image}
+            image={vc}
             linkedln=""
-            name="John Doe"
-            title="MD"
+            name="Dr Shamsudeen Aliyu"
+            title="Vice Chairman"
             twitter=""
           />
           <T
-            facebook=""
-            image={new_image}
+            image={cmd}
             linkedln=""
-            name="John Doe"
-            title="MD"
+            name="Dr Mohammed Abdullahi"
+            title="CMD"
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
-            title="MD"
+            title="CMAC"
+            twitter=""
+          />
+          <T
+            image={new_image}
+            linkedln=""
+            name="John Doe"
+            title="GM ADMIN"
+            twitter=""
+          />
+          <T
+            image={gmb}
+            linkedln=""
+            name="Mr Kelvin Ojonugwa Akpala"
+            title="GM BUSSINESS DEVELOPMENT"
+            twitter=""
+          />
+          <T
+            image={gmf}
+            linkedln=""
+            name="Adebisi Adebayo Lukman (SABA)"
+            title="GM FINANCE"
+            twitter=""
+          />
+          <T
+            image={gmf}
+            linkedln=""
+            name="Abbas Bello Nagwari"
+            title="Asst. Manager BDCC"
             twitter=""
           />
         </div>
@@ -63,7 +91,6 @@ export default function Team() {
         </div>
         <div className="grid md:grid-cols-4 gap-4 p-4">
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -71,7 +98,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -79,7 +105,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -87,7 +112,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -95,7 +119,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -103,7 +126,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -111,7 +133,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"
@@ -119,7 +140,6 @@ export default function Team() {
             twitter=""
           />
           <T
-            facebook=""
             image={new_image}
             linkedln=""
             name="John Doe"

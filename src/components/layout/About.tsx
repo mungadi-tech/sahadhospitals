@@ -23,16 +23,17 @@ export function About() {
             </h1>
             <article className="mb-4 text-xl text-gray-600">
               <i>
-                The Centre was established by the University, through a TetFund
-                grant, as a Urology and Nephrology Complex of international
-                standard that will provide a forum for research and invention,
-                manpower development and treatment of common Urologic,
-                Uro-gynaecologic and Renal diseases prevalent in the sub-region
-                The Centre was established by the University, through a TetFund
-                grant, as a Urology and Nephrology Complex of international
-                standard that will provide a forum for research and invention,
-                manpower development and treatment of common Urologic,
-                Uro-gynaecologic and Renal diseases prevalent in the sub-region
+                Sahad Hospital is a reputable healthcare facility with a
+                capacity of 200 beds and 7 operating theaters. Known for its
+                commitment to providing high-quality healthcare services, Sahad
+                Hospital has become a trusted name in the industry. The hospital
+                boasts state-of-the-art facilities and equipment, ensuring that
+                patients receive the best possible care. <br />
+                The 200-bed capacity allows for the accommodation of a wide
+                range of medical conditions and ensures that patients can be
+                treated promptly. With 7 operating theaters, Sahad Hospital is
+                well-equipped to handle complex surgical procedures across
+                various specialties....
               </i>
             </article>
             <div className="my-8 hover:text-info text-xl text-gray-600">

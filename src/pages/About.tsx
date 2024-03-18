@@ -27,27 +27,38 @@ export default function About() {
               </h1>
               <article className="mt-4 text-xl text-gray-600">
                 <i>
-                  The Centre was established by the University, through a
-                  TetFund grant, as a Urology and Nephrology Complex of
-                  international standard that will provide a forum for research
-                  and invention, manpower development and treatment of common
-                  Urologic, Uro-gynaecologic and Renal diseases prevalent in the
-                  sub-region The Centre was established by the University,
-                  through a TetFund grant, as a Urology and Nephrology Complex
-                  of international standard that will provide a forum for
-                  research and invention, manpower development and treatment of
-                  common Urologic, Uro-gynaecologic and Renal diseases prevalent
-                  in the sub-region The Centre was established by the
-                  University, through a TetFund grant, as a Urology and
-                  Nephrology Complex of international standard that will provide
-                  a forum for research and invention, manpower development and
-                  treatment of common Urologic, Uro-gynaecologic and Renal
-                  diseases prevalent in the sub-region The Centre was
-                  established by the University, through a TetFund grant, as a
-                  Urology and Nephrology Complex of international standard that
-                  will provide a forum for research and invention, manpower
-                  development and treatment of common Urologic, Uro-gynaecologic
-                  and Renal diseases prevalent in the sub-region
+                  Sahad Hospital is a reputable healthcare facility with a
+                  capacity of 200 beds and 7 operating theaters. Known for its
+                  commitment to providing high-quality healthcare services,
+                  Sahad Hospital has become a trusted name in the industry. The
+                  hospital boasts state-of-the-art facilities and equipment,
+                  ensuring that patients receive the best possible care. The
+                  200-bed capacity allows for the accommodation of a wide range
+                  of medical conditions and ensures that patients can be treated
+                  promptly. With 7 operating theaters, Sahad Hospital is
+                  well-equipped to handle complex surgical procedures across
+                  various specialties. This enables the hospital to offer a
+                  comprehensive range of surgical services and meet the diverse
+                  needs of patients.
+                </i>
+                <i>
+                  <br />
+                  The team at Sahad Hospital consists of highly skilled and
+                  experienced medical professionals who are dedicated to
+                  delivering exceptional care. From surgeons and physicians to
+                  nurses and support staff, every member of the team is
+                  committed to providing personalized treatment plans and
+                  ensuring patient comfort throughout their stay. In addition to
+                  its impressive infrastructure and medical expertise, Sahad
+                  Hospital also places great importance on patient satisfaction.
+                  The hospital strives to create a warm and welcoming
+                  environment for patients, emphasizing compassionate care
+                  alongside professional excellence. Overall, Sahad Hospital's
+                  commitment to delivering high-quality healthcare services
+                  combined with its advanced facilities make it an esteemed
+                  institution in the healthcare industry. Patients can trust
+                  Sahad Hospital for their medical needs knowing they will
+                  receive top-notch care from a dedicated team of experts.
                 </i>
               </article>
             </div>
