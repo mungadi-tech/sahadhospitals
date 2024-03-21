@@ -22,22 +22,20 @@ export function About() {
               The Best Medics, Doctors & Physicians
             </h1>
             <article className="mb-4 text-xl text-gray-600">
-              <i>
-                Sahad Hospital is a reputable healthcare facility with a
-                capacity of 200 beds and 7 operating theaters. Known for its
-                commitment to providing high-quality healthcare services, Sahad
-                Hospital has become a trusted name in the industry. The hospital
-                boasts state-of-the-art facilities and equipment, ensuring that
-                patients receive the best possible care. <br />
-                The 200-bed capacity allows for the accommodation of a wide
-                range of medical conditions and ensures that patients can be
-                treated promptly. With 7 operating theaters, Sahad Hospital is
-                well-equipped to handle complex surgical procedures across
-                various specialties....
-              </i>
+              Sahad Hospital is a reputable healthcare facility with a capacity
+              of 200 beds and 7 operating theaters. Known for its commitment to
+              providing high-quality healthcare services, Sahad Hospital has
+              become a trusted name in the industry. The hospital boasts
+              state-of-the-art facilities and equipment, ensuring that patients
+              receive the best possible care. <br />
+              The 200-bed capacity allows for the accommodation of a wide range
+              of medical conditions and ensures that patients can be treated
+              promptly. With 7 operating theaters, Sahad Hospital is
+              well-equipped to handle complex surgical procedures across various
+              specialties....
             </article>
             <div className="my-8 hover:text-info text-xl text-gray-600">
-              <Link to={""}>Read More</Link>
+              <Link to={"/about"}>Read More</Link>
             </div>
           </div>
         </div>

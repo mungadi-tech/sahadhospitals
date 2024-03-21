@@ -1,5 +1,6 @@
 import { Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Badge } from "../ui/badge";
 
 interface TeamTypes {
   name: string;
@@ -17,10 +18,8 @@ export const Team = ({ twitter, name, title, image }: TeamTypes) => {
       <div className="p-4">
         <div className="flex gap-4 justify-between">
           <div className="flex gap-2 items-center">
-            <span className="font-bold text-destructive text-sm ">{name}</span>
-            <span className="uppercase text-destructive font-bold text-sm">
-              - {title}
-            </span>
+            <span className="font-bold text-primary text-sm ">{name}</span>
+            <Badge variant={"destructive"}>{title}</Badge>
           </div>
           <div className="flex gap-2">
             <Link to={twitter}>

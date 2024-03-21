@@ -25,8 +25,8 @@ export default function About() {
               <h1 className="text-3xl my-8 md:my-0 font-bold text-gray-600 mb-4">
                 The Best Medics, Doctors & Physicians
               </h1>
-              <article className="mt-4 text-xl text-gray-600">
-                <i>
+              <article className="mt-4 text-sm text-gray-600">
+                <p>
                   Sahad Hospital is a reputable healthcare facility with a
                   capacity of 200 beds and 7 operating theaters. Known for its
                   commitment to providing high-quality healthcare services,
@@ -40,9 +40,9 @@ export default function About() {
                   various specialties. This enables the hospital to offer a
                   comprehensive range of surgical services and meet the diverse
                   needs of patients.
-                </i>
-                <i>
-                  <br />
+                </p>
+                <br />
+                <p>
                   The team at Sahad Hospital consists of highly skilled and
                   experienced medical professionals who are dedicated to
                   delivering exceptional care. From surgeons and physicians to
@@ -59,7 +59,7 @@ export default function About() {
                   institution in the healthcare industry. Patients can trust
                   Sahad Hospital for their medical needs knowing they will
                   receive top-notch care from a dedicated team of experts.
-                </i>
+                </p>
               </article>
             </div>
           </div>

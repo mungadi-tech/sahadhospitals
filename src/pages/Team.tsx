@@ -4,8 +4,11 @@ import { Team as T } from "@/components/layout/Team";
 import cmd from "../assets/images/cmd.jpg";
 import gmb from "../assets/images/gmb.jpg";
 import gmf from "../assets/images/gmf.jpg";
+import hr from "../assets/images/hr.jpg";
+import chairman from "../assets/images/chairman.jpg";
 import vc from "../assets/images/vc.jpg";
 import new_image from "../assets/images/2150896634.jpg";
+import cmac from "../assets/images/cmac.jpg";
 
 export default function Team() {
   return (
@@ -26,7 +29,7 @@ export default function Team() {
         </div>
         <div className="grid md:grid-cols-4 gap-4 p-4">
           <T
-            image={cmd}
+            image={chairman}
             name="Alh Ibrahim Mijinyawa"
             title="Chairman "
             twitter=""
@@ -38,18 +41,23 @@ export default function Team() {
             twitter=""
           />
           <T image={cmd} name="Dr Mohammed Abdullahi" title="CMD" twitter="" />
-          <T image={new_image} name="John Doe" title="CMAC" twitter="" />
-          <T image={new_image} name="John Doe" title="GM ADMIN" twitter="" />
+          <T image={cmac} name="Dr Muawiyya Zagga" title="CMAC" twitter="" />
+          <T
+            image={hr}
+            name="Alh Nuraddeen H Mahe"
+            title="GM Admin/HR"
+            twitter=""
+          />
           <T
             image={gmb}
             name="Mr Kelvin Ojonugwa Akpala"
-            title="GM BUSSINESS DEVELOPMENT"
+            title="GM Business Development"
             twitter=""
           />
           <T
             image={gmf}
             name="Adebisi Adebayo Lukman (SABA)"
-            title="GM FINANCE"
+            title="GM Finance"
             twitter=""
           />
           <T

@@ -5,6 +5,10 @@ import { Services } from "@/components/layout/Services";
 import { Surgeries } from "@/components/layout/Surgeries";
 import { Button } from "@/components/ui/button";
 import new_image from "../assets/images/2150896634.jpg";
+import cmd from "../assets/images/cmd.jpg";
+import vc from "../assets/images/vc.jpg";
+import chairman from "../assets/images/chairman.jpg";
+import cmac from "../assets/images/cmac.jpg";
 import { Team } from "@/components/layout/Team";
 import { Link } from "react-router-dom";
 import { BookAppointmentForm } from "@/components/forms/BookAppointmentForm";
@@ -86,13 +90,28 @@ export default function Index() {
             </span>
           </div>
           <div className="grid md:grid-cols-4 gap-4">
-            <Team image={new_image} name="John Doe" title="MD" twitter="" />
-            <Team image={new_image} name="John Doe" title="MD" twitter="" />
-            <Team image={new_image} name="John Doe" title="MD" twitter="" />
-            <Team image={new_image} name="John Doe" title="MD" twitter="" />
+            <Team
+              image={chairman}
+              name="Alh Ibrahim Mijinyawa"
+              title="Chairman "
+              twitter=""
+            />
+            <Team
+              image={vc}
+              name="Dr Shamsudeen Aliyu"
+              title="Vice Chairman"
+              twitter=""
+            />
+            <Team
+              image={cmd}
+              name="Dr Mohammed Abdullahi "
+              title="MD"
+              twitter=""
+            />
+            <Team image={cmac} name="John Doe" title="CMAC" twitter="" />
           </div>
           <div className="mt-4 text-gray-600 text-2xl flex justify-center hover:text-secondary">
-            <Link to={""} className="shadow-md p-2">
+            <Link to={"/team"} className="shadow-md p-2">
               View More
             </Link>
           </div>

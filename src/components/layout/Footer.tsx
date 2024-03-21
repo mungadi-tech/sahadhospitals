@@ -1,6 +1,7 @@
 import { ArrowBigRight, Locate, Phone } from "lucide-react";
 import logo from "../../assets/images/logoWhite.png";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { Link } from "react-router-dom";
 
 const department = [
   { name: "Neurology" },
@@ -11,11 +12,11 @@ const department = [
   { name: "Otorhinolaryngology" },
 ];
 const flinks = [
-  { name: "About Us" },
-  { name: "Our Team" },
-  { name: "News" },
-  { name: "Services" },
-  { name: "Appointment" },
+  { name: "About Us", url: "/about" },
+  { name: "Our Team", url: "/team" },
+  { name: "News", url: "" },
+  { name: "Services", url: "/services" },
+  { name: "Appointment", url: "" },
 ];
 const fservices = [
   { name: "Clinical" },
@@ -58,9 +59,11 @@ export const Footer = () => {
             <h1 className="text-2xl font-semibold mb-8">Links</h1>
             <ul className="flex flex-col gap-4">
               {flinks.map((d) => (
-                <li className="flex gap-2 hover:text-secondary">
-                  <ArrowBigRight className="text-secondary" />
-                  <span>{d.name}</span>
+                <li className="hover:text-secondary">
+                  <Link to={d.url} className="flex gap-2">
+                    <ArrowBigRight className="text-secondary" />
+                    <span>{d.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
