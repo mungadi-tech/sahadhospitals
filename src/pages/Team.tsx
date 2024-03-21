@@ -61,7 +61,7 @@ export default function Team() {
             twitter=""
           />
           <T
-            image={gmf}
+            image={""}
             name="Abbas Bello Nagwari"
             title="Asst. Manager BDCC"
             twitter=""
