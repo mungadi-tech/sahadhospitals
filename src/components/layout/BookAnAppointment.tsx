@@ -1,4 +1,4 @@
-import { BookAppointmentModalForm } from "../forms/BookAppointmentForm";
+// import { BookAppointmentModalForm } from "../forms/BookAppointmentForm";
 
 interface BookAnAppointmentprops {
   heading: string;
@@ -17,7 +17,7 @@ export const BookAnAppointment = ({
         <span className=" font-extrabold text-3xl">{heading}</span>
         <p className=" mt-10 font-bold text-xl">{content1}</p>
         <p className=" font-bold mt-10 text-xl">{content2}</p>
-        <BookAppointmentModalForm />
+        {/* <BookAppointmentModalForm /> */}
       </div>
     </div>
   );

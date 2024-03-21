@@ -11,7 +11,6 @@ import chairman from "../assets/images/chairman.jpg";
 import cmac from "../assets/images/cmac.jpg";
 import { Team } from "@/components/layout/Team";
 import { Link } from "react-router-dom";
-import { BookAppointmentForm } from "@/components/forms/BookAppointmentForm";
 
 export default function Index() {
   return (
@@ -78,7 +77,7 @@ export default function Index() {
               </div>
             </div>
             <div id="appointment" className="bg-slate-200 p-4 rounded-lg">
-              <BookAppointmentForm />
+              {/* <BookAppointmentForm /> */}
             </div>
           </div>
         </div>

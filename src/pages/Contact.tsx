@@ -1,4 +1,3 @@
-import { ContactUsForm } from "@/components/forms/ContactUsForm";
 import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import { Cable, MailPlus, MapPin, Phone } from "lucide-react";
@@ -60,9 +59,7 @@ export const Contact = () => {
             </div>
           ))}
         </div>
-        <div className="">
-          <ContactUsForm />
-        </div>
+        <div className=""></div>
       </section>
     </>
   );
