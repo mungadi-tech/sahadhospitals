@@ -27,56 +27,33 @@ export default function Team() {
         <div className="grid md:grid-cols-4 gap-4 p-4">
           <T
             image={cmd}
-            linkedln=""
             name="Alh Ibrahim Mijinyawa"
             title="Chairman "
             twitter=""
           />
           <T
             image={vc}
-            linkedln=""
             name="Dr Shamsudeen Aliyu"
             title="Vice Chairman"
             twitter=""
           />
-          <T
-            image={cmd}
-            linkedln=""
-            name="Dr Mohammed Abdullahi"
-            title="CMD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="CMAC"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="GM ADMIN"
-            twitter=""
-          />
+          <T image={cmd} name="Dr Mohammed Abdullahi" title="CMD" twitter="" />
+          <T image={new_image} name="John Doe" title="CMAC" twitter="" />
+          <T image={new_image} name="John Doe" title="GM ADMIN" twitter="" />
           <T
             image={gmb}
-            linkedln=""
             name="Mr Kelvin Ojonugwa Akpala"
             title="GM BUSSINESS DEVELOPMENT"
             twitter=""
           />
           <T
             image={gmf}
-            linkedln=""
             name="Adebisi Adebayo Lukman (SABA)"
             title="GM FINANCE"
             twitter=""
           />
           <T
             image={gmf}
-            linkedln=""
             name="Abbas Bello Nagwari"
             title="Asst. Manager BDCC"
             twitter=""
@@ -90,62 +67,14 @@ export default function Team() {
           </span>
         </div>
         <div className="grid md:grid-cols-4 gap-4 p-4">
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
-          <T
-            image={new_image}
-            linkedln=""
-            name="John Doe"
-            title="MD"
-            twitter=""
-          />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
+          <T image={new_image} name="John Doe" title="MD" twitter="" />
         </div>
       </section>
     </div>

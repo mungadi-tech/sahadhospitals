@@ -86,38 +86,10 @@ export default function Index() {
             </span>
           </div>
           <div className="grid md:grid-cols-4 gap-4">
-            <Team
-              facebook=""
-              image={new_image}
-              linkedln=""
-              name="John Doe"
-              title="MD"
-              twitter=""
-            />
-            <Team
-              facebook=""
-              image={new_image}
-              linkedln=""
-              name="John Doe"
-              title="MD"
-              twitter=""
-            />
-            <Team
-              facebook=""
-              image={new_image}
-              linkedln=""
-              name="John Doe"
-              title="MD"
-              twitter=""
-            />
-            <Team
-              facebook=""
-              image={new_image}
-              linkedln=""
-              name="John Doe"
-              title="MD"
-              twitter=""
-            />
+            <Team image={new_image} name="John Doe" title="MD" twitter="" />
+            <Team image={new_image} name="John Doe" title="MD" twitter="" />
+            <Team image={new_image} name="John Doe" title="MD" twitter="" />
+            <Team image={new_image} name="John Doe" title="MD" twitter="" />
           </div>
           <div className="mt-4 text-gray-600 text-2xl flex justify-center hover:text-secondary">
             <Link to={""} className="shadow-md p-2">

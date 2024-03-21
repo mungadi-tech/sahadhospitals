@@ -5,7 +5,6 @@ interface TeamTypes {
   name: string;
   title: string;
   twitter: string;
-  linkedln: string;
   image: string;
 }
 
