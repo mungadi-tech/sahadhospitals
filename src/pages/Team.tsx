@@ -24,7 +24,7 @@ export default function Team() {
         <div className="text-center my-8">
           <h1 className="font-bold text-xl text-primary">LEADING TEAM</h1>
           <span className="font-bold text-3xl md:text-4xl text-gray-600">
-            Meet Our Administrators
+            Meet the Top Management Team
           </span>
         </div>
         <div className="grid md:grid-cols-4 gap-4 p-4">
@@ -51,19 +51,13 @@ export default function Team() {
           <T
             image={gmb}
             name="Mr Kelvin Ojonugwa Akpala"
-            title="GM Business Development"
+            title="GM Business Dev./Cooperate Comm."
             twitter=""
           />
           <T
             image={gmf}
             name="Adebisi Adebayo Lukman (SABA)"
-            title="GM Finance"
-            twitter=""
-          />
-          <T
-            image={""}
-            name="Abbas Bello Nagwari"
-            title="Asst. Manager BDCC"
+            title="GM Finance/Account"
             twitter=""
           />
         </div>

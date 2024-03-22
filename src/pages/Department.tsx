@@ -8,48 +8,71 @@ import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 
 const departments = [
   {
-    title: "Surgical",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "General Medicine",
+    content:
+      "From routine check-ups to complex medical conditions, our expert physicians provide personalized care to address all your healthcare needs.",
+    icon: Stethoscope,
+  },
+  {
+    title: "Accident & Emergency",
+    content:
+      " Our experienced gynecologists offer comprehensive women's health services, including preventive care, reproductive health management",
+    icon: Stethoscope,
+  },
+  {
+    title: "Internal Medicine",
+    content:
+      " Our experienced gynecologists offer comprehensive women's health services, including preventive care, reproductive health management",
+    icon: Stethoscope,
+  },
+  {
+    title: "Surgery",
+    content:
+      "Our highly skilled surgeons utilize advanced techniques and cutting-edge technology to perform a wide range of surgical procedures with precision and safety",
     icon: Stethoscope,
   },
   {
     title: "Cardiology",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    content:
+      "We offer comprehensive cardiac care, including diagnostics, intervention, and rehabilitation programs to help you maintain a healthy heart.",
     icon: Stethoscope,
   },
   {
-    title: "X-Ray",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "Orthopedics",
+    content:
+      "Our orthopedic specialists provide advanced treatments for musculoskeletal conditions, including joint replacements, sports injuries, and trauma management.",
     icon: Stethoscope,
   },
   {
-    title: "Surgical",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "Pharmacy",
+    content: " ",
     icon: Stethoscope,
   },
   {
-    title: "Cardiology",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "Radiology",
+    content: " ",
     icon: Stethoscope,
   },
   {
-    title: "X-Ray",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
-    icon: Stethoscope,
-  },
-  {
-    title: "Dental",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "Laboratory",
+    content: " ",
     icon: Stethoscope,
   },
   {
     title: "Nephrology",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    content:
+      "We have a dedicated team ofneurologists who specialize in diagnosing and treating neurological disorders using the latest advancements in the field.",
     icon: Stethoscope,
   },
   {
-    title: "Gynaecology",
-    content: "Lorem ipsum dolor sit, amet consectetur adipisicing.",
+    title: "Obsetrics & Gynaecology",
+    content:
+      " Our experienced gynecologists offer comprehensive women's health services, including preventive care, reproductive health management",
+    icon: Stethoscope,
+  },
+  {
+    title: "Peadiatrics",
+    content: " ",
     icon: Stethoscope,
   },
 ];
@@ -72,11 +95,11 @@ export default function Department() {
         <div className="grid md:grid-cols-3">
           {departments.map((d) => (
             <div className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-primary to-secondary hover:text-white">
-              {<d.icon className="size-10 text-info group-hover:text-white" />}
-              <span className="text-3xl font-bold text-gray-800 group-hover:text-white">
+              {<d.icon className="size-6 text-info group-hover:text-white" />}
+              <span className="text-xl font-bold text-gray-800 group-hover:text-white">
                 {d.title}
               </span>
-              <p className="text-center text-xl text-gray-600 group-hover:text-white">
+              <p className="text-center text-xs text-gray-600 group-hover:text-white">
                 {d.content}
               </p>
             </div>

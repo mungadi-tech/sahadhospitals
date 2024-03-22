@@ -20,7 +20,7 @@ export default function Index() {
       <section className="p-2">
         <div className="text-center my-8">
           <h1 className="font-bold text-xl text-primary">LATEST NEWS</h1>
-          <span className="font-bold text-3xl md:text-4xl text-gray-600">
+          <span className="font-bold text-xl md:text-4xl text-gray-600">
             Get Every Single Updates Here
           </span>
         </div>
@@ -85,7 +85,7 @@ export default function Index() {
           <div className="text-center my-8">
             <h1 className="font-bold text-xl text-primary">LEADING TEAM</h1>
             <span className="font-bold text-3xl md:text-4xl text-gray-600">
-              Meet Our Team
+              Meet the Top Management Team
             </span>
           </div>
           <div className="grid md:grid-cols-4 gap-4">
@@ -104,7 +104,7 @@ export default function Index() {
             <Team
               image={cmd}
               name="Dr Mohammed Abdullahi "
-              title="MD"
+              title="CMD"
               twitter=""
             />
             <Team image={cmac} name="John Doe" title="CMAC" twitter="" />

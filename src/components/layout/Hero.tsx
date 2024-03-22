@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
-import hero1 from "../../assets/images/hero1.jpg";
-import hero2 from "../../assets/images/hero2.jpg";
-import hero3 from "../../assets/images/hero3.jpg";
+import c1 from "../../assets/images/c1.jpg";
+import c2 from "../../assets/images/c2.jpg";
+import c3 from "../../assets/images/c3.jpg";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
@@ -26,19 +26,19 @@ function HeroCarousel() {
       headline: "WELCOME TO SAHAD HOSPITALS",
       slogan: "Affordable Healthcare for All",
       link: "",
-      image: hero1,
+      image: c1,
     },
     {
       headline: "WELCOME TO SAHAD HOSPITALS",
       slogan: "Affordable Healthcare for All",
       link: "",
-      image: hero2,
+      image: c2,
     },
     {
       headline: "WELCOME TO SAHAD HOSPITALS",
       slogan: "Affordable Healthcare for All",
       link: "",
-      image: hero3,
+      image: c3,
     },
   ];
 

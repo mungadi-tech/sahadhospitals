@@ -115,22 +115,19 @@ export default function About() {
 
 const core_values = [
   {
-    title: "Training",
+    title: "Mission",
     icon: School,
-    content:
-      "Workshops and short courses, Residency training(NWPGC),Pre part one training for Surgeons, Gynaecologist and physicians(Nephrology)...",
+    content: "...",
   },
   {
-    title: "Clinical Service (Urology)",
+    title: "Vission",
     icon: Pill,
-    content:
-      "Retrograde Ureteric and Intrarenal Surgery using Laser,Transurethral Prostate Surgery; Vaporization, Resection and Enucleation, Endourethral surgery, Laparoscopic Surgery, Complex Urethral and Ureteric Reconstruction, Prostate, Bladder and Kidney cancer Treatment...",
+    content: "...",
   },
   {
-    title: "Clinical Service (Nephrology)",
+    title: "Core Values",
     icon: Building,
-    content:
-      "General Nephrology, Haemodialysis, Transplant evaluation for recipient and donor,Interdepartmental consultation,Out patient clinic runs on Tuesday...",
+    content: "...",
   },
 ];
 

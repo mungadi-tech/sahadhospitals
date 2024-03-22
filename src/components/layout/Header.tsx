@@ -11,12 +11,8 @@ import {
 
 const nav_links = [
   {
-    title: "NEWS",
-    href: "news/",
-  },
-  {
-    title: "GALLERY",
-    href: "gallery/",
+    title: "ABOUT US",
+    href: "about/",
   },
   {
     title: "OUR TEAM",
@@ -31,8 +27,12 @@ const nav_links = [
     href: "department/",
   },
   {
-    title: "ABOUT US",
-    href: "about/",
+    title: "GALLERY",
+    href: "gallery/",
+  },
+  {
+    title: "NEWS",
+    href: "news/",
   },
   {
     title: "CONTACT US",

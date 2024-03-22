@@ -10,36 +10,48 @@ import { CubeIcon } from "@radix-ui/react-icons";
 
 const surgeries = [
   {
-    title: "Kidney Transplant",
-    content: "Ultrasound Guided transrectal Prostrate Biopsy and Kidney Biopsy",
+    title: "Surgery & Minimally Access Surgery",
+    content: "",
     icon: ArchiveRestoreIcon,
   },
   {
-    title: "Percutaneous Nephrolithotomy",
-    content: "Ultrasound Guided Transrectal Prostate Biopsy and Kidney Biopsy",
+    title: "Cardiac Sciences",
+    content: "including Interventional Cardiology & Cardiac Surgery",
     icon: CubeIcon,
   },
   {
-    title: "Retrograde Ureteric And Intrarenal Surgery using Laser",
-    content:
-      "Transurethral Prostate Surgery; Vaporization, Resection and Enucleation",
+    title: "Critical Care",
+    content: " Adult, Pediatrics & Neonatal",
     icon: FlaskConical,
   },
   {
-    title: "Endourethral surgery",
-    content:
-      "Neobladder Reconstruction (bowel bladder) and continent catherizable stoma construction",
+    title: "Emergency Medicine & Critical Care",
+    content: " ",
     icon: Monitor,
   },
   {
-    title: "Laparoscopic Surgery",
-    content: "Sex Reassignment and Intersex Surgeries",
+    title: "Neurosciences & Neurosurgery",
+    content: " ",
     icon: Microscope,
   },
   {
-    title: "Repair of Congenital Anomalies",
-    content:
-      "Many other general and specialized urological and uro-gynaecological procedures",
+    title: "Surgical and Chemotherapy",
+    content: " ",
+    icon: Hexagon,
+  },
+  {
+    title: "Orthopedics & Trauma ",
+    content: " including Joint Replacement",
+    icon: Hexagon,
+  },
+  {
+    title: "Pediatrics and Pediatric Surgery",
+    content: " ",
+    icon: Hexagon,
+  },
+  {
+    title: "Nuclear Medicine",
+    content: " ",
     icon: Hexagon,
   },
 ];
@@ -49,7 +61,7 @@ export const Surgeries = () => {
     <div className="p-4 md:w-[90%] mx-auto">
       <div className="my-10">
         <h1 className="text-4xl text-gray-600 text-center uppercase font-bold">
-          Surgeries we offer
+          Our Focus Specialities
         </h1>
         <div className="border-b-4 border-info w-14 mx-auto my-4"></div>
       </div>

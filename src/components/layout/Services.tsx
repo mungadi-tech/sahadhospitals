@@ -1,34 +1,45 @@
 import { Book, Building, Dna, Pill, School } from "lucide-react";
-
 const services = [
   {
-    title: "Training",
+    title: "Blood Bank",
     icon: School,
-    content:
-      "Workshops and short courses, Residency training(NWPGC),Pre part one training for Surgeons, Gynaecologist and physicians(Nephrology)...",
+    content: " ",
   },
   {
-    title: "Clinical Service (Urology)",
+    title: "Dialysis",
     icon: Pill,
-    content:
-      "Retrograde Ureteric and Intrarenal Surgery using Laser,Transurethral Prostate Surgery; Vaporization, Resection and Enucleation, Endourethral surgery, Laparoscopic Surgery, Complex Urethral and Ureteric Reconstruction, Prostate, Bladder and Kidney cancer Treatment...",
+    content: " Hemodialysis and Peritoneal",
   },
   {
-    title: "Clinical Service (Nephrology)",
+    title: "Emergency & Trauma Unit",
     icon: Building,
-    content:
-      "General Nephrology, Haemodialysis, Transplant evaluation for recipient and donor,Interdepartmental consultation,Out patient clinic runs on Tuesday...",
+    content: "..",
   },
   {
-    title: "Clinical Service (Urogynaecology)",
+    title: "Endoscopy",
     icon: Dna,
-    content:
-      "Vesicovaginal Fistula and Rectovaginal Fistula repair, Cystocele,rectocele,Female urethral reconstruction, Sphincters plasty, Pelvic floor repair/ perrineorrhaphy, Vaginoplasty...",
+    content: "Gastroscopy, Colonoscopy, ERCP",
   },
   {
-    title: "Research",
+    title: "Imaging Unit",
     icon: Book,
-    content: "Coming Soon...",
+    content:
+      "MRI, CT-Scan, Spect CT-Scan, Digital X-Ray & Fluoroscopy, 3D & 4D Ultrasound",
+  },
+  {
+    title: "Laboratory",
+    icon: Book,
+    content: "Hematology, Immuno-Chemistry, Pathology, Cytology, Microbiology",
+  },
+  {
+    title: "LDRs & Delivery Suites",
+    icon: Book,
+    content: " ",
+  },
+  {
+    title: "Physiotherapy",
+    icon: Book,
+    content: " ",
   },
 ];
 

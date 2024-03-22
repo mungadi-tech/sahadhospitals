@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Building, TestTube, User } from "lucide-react";
-import doctor from "../../assets/images/doctors.jpg";
+import site from "../../assets/images/site.jpg";
 
 export function About() {
   return (
@@ -16,12 +16,12 @@ export function About() {
       </div>
       <div>
         <div className="grid md:grid-cols-2 mt-8 gap-4">
-          <img src={doctor} alt="" />
+          <img src={site} alt="" />
           <div>
-            <h1 className="text-3xl mb-4 font-bold text-gray-600">
+            <h1 className="text-xl mb-4 font-bold text-gray-600">
               The Best Medics, Doctors & Physicians
             </h1>
-            <article className="mb-4 text-xl text-gray-600">
+            <article className="mb-4 text-xs text-gray-600">
               Sahad Hospital is a reputable healthcare facility with a capacity
               of 200 beds and 7 operating theaters. Known for its commitment to
               providing high-quality healthcare services, Sahad Hospital has
@@ -32,7 +32,22 @@ export function About() {
               of medical conditions and ensures that patients can be treated
               promptly. With 7 operating theaters, Sahad Hospital is
               well-equipped to handle complex surgical procedures across various
-              specialties....
+              specialties. This enables the hospital to offer a comprehensive
+              range of surgical services and meet the diverse needs of patients.
+              <br />
+              <p>
+                The team at Sahad Hospital consists of highly skilled and
+                experienced medical professionals who are dedicated to
+                delivering exceptional care. From surgeons and physicians to
+                nurses and support staff, every member of the team is committed
+                to providing personalized treatment plans and ensuring patient
+                comfort throughout their stay. In addition to its impressive
+                infrastructure and medical expertise, Sahad Hospital also places
+                great importance on patient satisfaction. The hospital strives
+                to create a warm and welcoming environment for patients,
+                emphasizing compassionate care alongside professional
+                excellence.
+              </p>
             </article>
             <div className="my-8 hover:text-info text-xl text-gray-600">
               <Link to={"/about"}>Read More</Link>

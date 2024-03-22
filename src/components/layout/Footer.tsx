@@ -4,12 +4,13 @@ import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { Link } from "react-router-dom";
 
 const department = [
-  { name: "Neurology" },
-  { name: "Opthalmology" },
+  { name: "Surgery" },
+  { name: "Radiology" },
   { name: "Gynaecology" },
   { name: "Cardiolology" },
-  { name: "Dental" },
-  { name: "Otorhinolaryngology" },
+  { name: "Pharmacy" },
+  { name: "Accident & Emergency" },
+  { name: "Internal Medicine" },
 ];
 const flinks = [
   { name: "About Us", url: "/about" },
