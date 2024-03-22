@@ -5,7 +5,7 @@ import {
   Microscope,
   Monitor,
 } from "lucide-react";
-import surge from "../../assets/images/2150896634.jpg";
+import surge from "../../assets/images/g3.jpg";
 import { CubeIcon } from "@radix-ui/react-icons";
 
 const surgeries = [
@@ -60,7 +60,7 @@ export const Surgeries = () => {
   return (
     <div className="p-4 md:w-[90%] mx-auto">
       <div className="my-10">
-        <h1 className="text-4xl text-gray-600 text-center uppercase font-bold">
+        <h1 className="text-2xl text-gray-600 text-center uppercase font-bold">
           Our Focus Specialities
         </h1>
         <div className="border-b-4 border-info w-14 mx-auto my-4"></div>
@@ -70,13 +70,13 @@ export const Surgeries = () => {
           {surgeries.map((s) => (
             <div className="flex items-center">
               <span className="mr-2">
-                <s.icon className="w-16 h-16 text-info" />
+                <s.icon className="w-10 h-10 text-info" />
               </span>
               <div>
-                <span className="text-gray-700 font-bold text-2xl">
+                <span className="text-gray-700 font-bold text-lg">
                   {s.title}
                 </span>
-                <p className="text-gray-700 text-lg">{s.content}</p>
+                <p className="text-gray-700 text-xs">{s.content}</p>
               </div>
             </div>
           ))}
