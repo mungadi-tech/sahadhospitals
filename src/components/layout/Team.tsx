@@ -13,11 +13,11 @@ export const Team = ({ twitter, name, title, image }: TeamTypes) => {
   return (
     <div className="">
       <div>
-        <img src={image} className="h-[20rem] rounded-lg w-full" />
+        <img src={image} className="h-[20rem] rounded-lg w-[20rem]" />
       </div>
       <div className="p-4">
-        <div className="flex gap-4 justify-between">
-          <div className="flex gap-2 items-center">
+        <div className="flex gap-2 justify-between">
+          <div className="flex gap-4 items-center">
             <span className="font-bold text-primary text-sm ">{name}</span>
             <Badge variant={"destructive"}>{title}</Badge>
           </div>
