@@ -1,5 +1,5 @@
 import { ArrowUp, CalendarCheck, Cog, Heart } from "lucide-react";
-import doctor from "../../assets/images/doctors.jpg";
+import doctor from "../../assets/images/s4.jpg";
 import { Card } from "../ui/card";
 import { Testimonials } from "./Testimonials";
 

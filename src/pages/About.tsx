@@ -1,5 +1,5 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
-import doctor from "../assets/images/doctors.jpg";
+import doctor from "../assets/images/s13.jpg";
 import { Building, Check, Pill, School } from "lucide-react";
 
 export default function About() {
