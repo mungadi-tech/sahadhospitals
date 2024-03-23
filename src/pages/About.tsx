@@ -8,7 +8,7 @@ export default function About() {
       <NavbarWithBreadcrums />
       <div className="my-14 p-4 w-[90%] mx-auto">
         <div className="flex justify-center flex-col">
-          <h1 className="uppercase text-4xl  inline-flex font-bold justify-center text-gray-700">
+          <h1 className="uppercase text-2xl  inline-flex font-bold justify-center text-gray-700">
             About Us
           </h1>
           <span className="border-b-4 border-info w-14 mx-auto my-4"></span>
@@ -22,7 +22,7 @@ export default function About() {
               <img className="w-full h-full" src={doctor} alt="" />
             </div>
             <div>
-              <h1 className="text-3xl my-8 md:my-0 font-bold text-gray-600 mb-4">
+              <h1 className="text-2xl my-8 md:my-0 font-bold text-gray-600 mb-4">
                 The Best Medics, Doctors & Physicians
               </h1>
               <article className="mt-4 text-sm text-gray-600">
@@ -67,8 +67,8 @@ export default function About() {
       </div>
       <div className="p-4 bg-gradient-to-tr from-primary to-secondary">
         <div className="text-center my-8">
-          <h1 className="font-bold text-xl text-white">MOTIVATON IS EASY</h1>
-          <span className="font-bold text-3xl md:text-4xl text-gray-900">
+          <h1 className="font-bold text-lg text-white">MOTIVATON IS EASY</h1>
+          <span className="font-bold text-2xl md:text-4xl text-gray-900">
             Our Core Values
           </span>
         </div>
@@ -76,12 +76,12 @@ export default function About() {
       </div>
       <div className="grid md:grid-cols-2 gap-4 my-8 p-4 w-[90%] mx-auto">
         <div className="my-8">
-          <h1 className="font-bold text-xl text-primary">WHAT WE OFFER</h1>
-          <span className="font-bold text-4xl text-gray-800">
+          <h1 className="font-bold text-lg text-primary">WHAT WE OFFER</h1>
+          <span className="font-bold text-2xl text-gray-800">
             Our Advantages
           </span>
           <div className="mt-6">
-            <p className="text-xl text-gray-600">
+            <p className="text-xs text-gray-600">
               Sahad Hospitals offer cutting-edge technology, expert care, and
               personalized service for superior healthcare. Trust our commitment
               to excellence and comprehensive services for your well-being. Your

@@ -47,7 +47,7 @@ function HeroCarousel() {
       className="md:w-[90%] w-[100%]"
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3000,
         }),
       ]}
     >
@@ -61,12 +61,12 @@ function HeroCarousel() {
                 className="absolute w-full h-full rounded-3xl"
               />
               <div className="relative h-fit my-auto mx-4 md:mx-auto backdrop-blur-sm bg-slate-800/30 font-bold flex flex-col justify-center md:gap-4 p-4 items-center">
-                <span className="text-4xl md:text-[3rem] text-center">
+                <span className="text-2xl md:text-[3rem] text-center">
                   {i.headline}
                 </span>
-                <span className="md:text-3xl text-md">{i.slogan}</span>
+                <span className="md:text-xl text-md">{i.slogan}</span>
                 <Link to={"about/"}>
-                  <Button className="mt-4 h-16 p-8 md:w-60 text-2xl rounded-full opacity-80">
+                  <Button className="mt-4 h-4 p-8 md:w-40 text-xl rounded-full opacity-80">
                     READ MORE...
                   </Button>
                 </Link>

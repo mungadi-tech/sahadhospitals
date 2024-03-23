@@ -20,7 +20,7 @@ export default function Index() {
       <section className="p-2">
         <div className="text-center my-8">
           <h1 className="font-bold text-xl text-primary">LATEST NEWS</h1>
-          <span className="font-bold text-xl md:text-4xl text-gray-600">
+          <span className="font-bold text-lg md:text-4xl text-gray-600">
             Get Every Single Updates Here
           </span>
         </div>
@@ -60,7 +60,7 @@ export default function Index() {
         <div className="bg-gradient-to-tr from-primary to-secondary mt-10 p-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="font-bold text-white">
-              <h1 className="text-3xl font-bold my-4">MAKE AN APPOINTMENT</h1>
+              <h1 className="text-2xl font-bold my-4">MAKE AN APPOINTMENT</h1>
               At Sahad Hospital, we believe in providing accessible and
               efficient healthcare. Schedule your appointment today and embark
               on your journey towards a healthier, happier life. Your well-being
@@ -84,7 +84,7 @@ export default function Index() {
         <section className="my-10 p-4">
           <div className="text-center my-8">
             <h1 className="font-bold text-xl text-primary">LEADING TEAM</h1>
-            <span className="font-bold text-3xl md:text-4xl text-gray-600">
+            <span className="font-bold text-2xl md:text-2xl text-gray-600">
               Meet the Top Management Team
             </span>
           </div>
