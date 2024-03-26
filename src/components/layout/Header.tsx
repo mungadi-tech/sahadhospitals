@@ -67,7 +67,7 @@ export const Header = () => {
           <li>
             <div className="flex gap-2">
               <Phone className="text-info" />
-              <span>+2327049225550</span>
+              <span>+2347049227730</span>
             </div>
           </li>
           <li>

@@ -1,15 +1,16 @@
 import "./App.css";
+import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import Index from "./pages/Index";
+const Index = lazy(() => import("./pages/Index"));
 import { Layout } from "./components/layout/Layout";
-import About from "./pages/About";
-import { Contact } from "./pages/Contact";
 import { Toaster } from "sonner";
-import Services from "./pages/Services";
-import Department from "./pages/Department";
-import Team from "./pages/Team";
-import Gallery from "./pages/Gallery";
-import NewsPage from "./pages/News";
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Services = lazy(() => import("./pages/Services"));
+const Department = lazy(() => import("./pages/Department"));
+const Team = lazy(() => import("./pages/Team"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const NewsPage = lazy(() => import("./pages/News"));
 
 function App() {
   return (
@@ -17,14 +18,86 @@ function App() {
       <Toaster richColors />
       <Routes>
         <Route element={<Layout />}>
-          <Route element={<Index />} path="/" />
-          <Route element={<About />} path="about/" />
-          <Route element={<Department />} path="department/" />
-          <Route element={<Contact />} path="contact/" />
-          <Route element={<Services />} path="services/" />
-          <Route element={<NewsPage />} path="news/" />
-          <Route element={<Gallery />} path="gallery/" />
-          <Route element={<Team />} path="team/" />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Index />
+              </Suspense>
+            }
+            path="/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <About />
+              </Suspense>
+            }
+            path="about/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Department />
+              </Suspense>
+            }
+            path="department/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Contact />
+              </Suspense>
+            }
+            path="contact/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Services />
+              </Suspense>
+            }
+            path="services/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <NewsPage />
+              </Suspense>
+            }
+            path="news/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Gallery />
+              </Suspense>
+            }
+            path="gallery/"
+          />
+          <Route
+            element={
+              <Suspense
+                fallback={<div className=" mt-56 text-center">loading...</div>}
+              >
+                <Team />
+              </Suspense>
+            }
+            path="team/"
+          />
         </Route>
       </Routes>
     </>

@@ -25,7 +25,7 @@ const info = [
   },
 ];
 
-export const Contact = () => {
+export default function Contact() {
   return (
     <>
       <NavbarWithBreadcrums />
@@ -63,4 +63,4 @@ export const Contact = () => {
       </section>
     </>
   );
-};
+}
