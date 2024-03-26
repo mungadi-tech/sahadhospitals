@@ -1,6 +1,6 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import doctor from "../assets/images/s13.jpg";
-import { Building, Check, Pill, School } from "lucide-react";
+import { Check } from "lucide-react";
 
 export default function About() {
   return (
@@ -66,28 +66,22 @@ export default function About() {
         </div>
       </div>
       <div className="p-4 bg-gradient-to-tr from-primary to-secondary">
-        <div className="text-center my-8">
-          <h1 className="font-bold text-lg text-white">MOTIVATON IS EASY</h1>
-          <span className="font-bold text-2xl md:text-4xl text-gray-900">
-            Our Core Values
-          </span>
-        </div>
+        <h1 className="font-bold my-4 text-white text-center text-2xl">
+          OUR CORE VALUES
+        </h1>
         <CoreValues />
       </div>
       <div className="grid md:grid-cols-2 gap-4 my-8 p-4 w-[90%] mx-auto">
-        <div className="my-8">
-          <h1 className="font-bold text-lg text-primary">WHAT WE OFFER</h1>
-          <span className="font-bold text-2xl text-gray-800">
-            Our Advantages
-          </span>
-          <div className="mt-6">
-            <p className="text-xs text-gray-600">
+        <div className="my-4">
+          <h1 className="font-bold text-2xl text-primary">WHAT WE OFFER</h1>
+          <div className="mt-2">
+            <p>
               Sahad Hospitals offer cutting-edge technology, expert care, and
               personalized service for superior healthcare. Trust our commitment
               to excellence and comprehensive services for your well-being. Your
               health, our priority.
             </p>
-            <ul className="text-xl text-gray-600 mt-10 space-y-2">
+            <ul className=" text-gray-600 mt-4 space-y-2">
               <li className="flex gap-2 items-center">
                 <Check className="text-info" />
                 Specialists and Dentists as One Team
@@ -116,17 +110,14 @@ export default function About() {
 const core_values = [
   {
     title: "Mission",
-    icon: School,
     content: "...",
   },
   {
     title: "Vission",
-    icon: Pill,
     content: "...",
   },
   {
     title: "Core Values",
-    icon: Building,
     content: "...",
   },
 ];
@@ -138,7 +129,6 @@ export function CoreValues() {
         <div className="grid md:grid-cols-3 gap-4 mt-8">
           {core_values.map((s) => (
             <div className="flex flex-col gap-4 text-center justify-center items-center">
-              <s.icon className="w-24 h-24 p-4 text-info rounded-full shadow-[0px_0px_10px_10px] shadow-slate-300" />
               <span className="text-2xl font-bold">{s.title}</span>
               <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>
               <p>{s.content}</p>

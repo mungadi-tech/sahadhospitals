@@ -45,7 +45,7 @@ const services = [
 
 export function Services() {
   return (
-    <div className="md:my-14 text-gray-600">
+    <div className="md:my-14 text-gray-600 p-4">
       <div className="flex justify-center flex-col md:my-24">
         <h1 className="uppercase text-4xl border-cyan-600 inline-flex font-bold justify-center text-gray-700">
           Services
@@ -57,9 +57,9 @@ export function Services() {
         </p>
       </div>
       <div>
-        <div className="grid md:grid-cols-3 gap-4 mt-8">
+        <div className="grid md:grid-cols-4 gap-4 mt-8">
           {services.map((s) => (
-            <div className="flex flex-col gap-4 text-center justify-center items-center">
+            <div className="border p-4 rounded-lg shadow-xl flex flex-col gap-4 text-center justify-center items-center">
               <s.icon className="w-24 h-24 p-4 text-info rounded-full shadow-[0px_0px_10px_10px] shadow-slate-300" />
               <span className="text-2xl font-bold">{s.title}</span>
               <span className="border-b-4 border-cyan-600 w-14 mx-auto my-2"></span>

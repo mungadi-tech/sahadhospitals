@@ -18,10 +18,10 @@ export function About() {
         <div className="grid md:grid-cols-2 mt-8 gap-4">
           <img src={site} alt="" />
           <div>
-            <h1 className="text-xl mb-4 font-bold text-gray-600">
+            <h1 className="text-xl mb-4 font-bold ">
               The Best Medics, Doctors & Physicians
             </h1>
-            <article className="mb-4 text-xs text-gray-600">
+            <article className=" text-sm ">
               Sahad Hospital is a reputable healthcare facility with a capacity
               of 200 beds and 7 operating theaters. Known for its commitment to
               providing high-quality healthcare services, Sahad Hospital has
@@ -49,9 +49,9 @@ export function About() {
                 excellence.
               </p>
             </article>
-            <div className="my-8 hover:text-info text-xl text-gray-600">
-              <Link to={"/about"}>Read More</Link>
-            </div>
+            <Link className="hover:text-info text-xl " to={"/about"}>
+              Read More
+            </Link>
           </div>
         </div>
         <Services />
@@ -92,7 +92,7 @@ const services = [
 function Services() {
   return (
     <>
-      <div className="my-6 p-4">
+      <div className="mt-10">
         <div className="grid gap-4 md:grid-cols-4">
           {services.map((s) => (
             <div className="p-4 group hover:bg-info shadow-info hover:text-white rounded-md shadow-[0px_5px_20px_0px]">
@@ -104,7 +104,7 @@ function Services() {
               <p className="my-4">
                 <Link
                   to={s.link}
-                  className="flex gap-2 group-hover:text-white text-gray-600"
+                  className="flex gap-2 group-hover:text-white "
                 >
                   Find out more <ArrowRight />
                 </Link>

@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import Department from "./pages/Department";
 import Team from "./pages/Team";
 import Gallery from "./pages/Gallery";
+import NewsPage from "./pages/News";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route element={<Department />} path="department/" />
           <Route element={<Contact />} path="contact/" />
           <Route element={<Services />} path="services/" />
+          <Route element={<NewsPage />} path="news/" />
           <Route element={<Gallery />} path="gallery/" />
           <Route element={<Team />} path="team/" />
         </Route>

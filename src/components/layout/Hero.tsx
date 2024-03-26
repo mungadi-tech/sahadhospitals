@@ -58,9 +58,9 @@ function HeroCarousel() {
               <img
                 src={i.image}
                 alt=""
-                className="absolute w-full h-full rounded-3xl"
+                className="absolute w-full h-full rounded-3xl brightness-75"
               />
-              <div className="relative h-fit my-auto mx-4 md:mx-auto backdrop-blur-sm bg-slate-800/30 font-bold flex flex-col justify-center md:gap-4 p-4 items-center">
+              <div className="relative h-fit my-auto mx-4 md:mx-auto backdrop-blur-sm font-bold flex flex-col justify-center md:gap-4 p-4 items-center">
                 <span className="text-2xl md:text-[3rem] text-center">
                   {i.headline}
                 </span>

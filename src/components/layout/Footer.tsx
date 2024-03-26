@@ -28,7 +28,7 @@ const fservices = [
 ];
 export const Footer = () => {
   return (
-    <footer className="__footer text-white">
+    <footer className="__footer text-white text-sm">
       {/* <div className="flex justify-around bg-primary p-8 my-8">
         <div className=" flex flex-col justify-center text-center text-white font-extrabold">
           <span className="text-3xl">Partner 1</span>
@@ -42,9 +42,7 @@ export const Footer = () => {
       </div> */}
       <div className="p-4">
         <div className="grid md:grid-cols-5 gap-4 p-4">
-          <div className="flex flex-col gap-4">
-            <img src={logo} className="w-[70%]" alt="" />
-          </div>
+          <img src={logo} className="w-[70%]" alt="" />
           <div>
             <h1 className="text-2xl font-semibold mb-8">Departments</h1>
             <ul className="flex flex-col gap-4">

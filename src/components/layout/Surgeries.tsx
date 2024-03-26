@@ -81,9 +81,8 @@ export const Surgeries = () => {
             </div>
           ))}
         </div>
-        <div>
-          <img src={surge} alt="" className="h-[90%] w-full md:block hidden" />
-        </div>
+
+        <img src={surge} alt="" className="h-full w-full md:block hidden" />
       </div>
     </div>
   );

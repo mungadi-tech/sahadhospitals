@@ -7,7 +7,6 @@ import gmf from "../assets/images/gmf.jpg";
 import hr from "../assets/images/hr.jpg";
 import chairman from "../assets/images/chairman.jpg";
 import vc from "../assets/images/vc.jpg";
-import new_image from "../assets/images/2150896634.jpg";
 import cmac from "../assets/images/cmac.jpg";
 
 export default function Team() {
@@ -60,23 +59,6 @@ export default function Team() {
             title="GM Finance/Account"
             twitter=""
           />
-        </div>
-
-        <div className="text-center my-8">
-          <h1 className="font-bold text-xl text-primary">LEADING TEAM</h1>
-          <span className="font-bold text-3xl md:text-4xl text-gray-600">
-            Meet Our Medical Staffs
-          </span>
-        </div>
-        <div className="grid md:grid-cols-4 gap-4 p-4">
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
-          <T image={new_image} name="John Doe" title="MD" twitter="" />
         </div>
       </section>
     </div>

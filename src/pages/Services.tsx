@@ -12,7 +12,10 @@ export default function Services() {
         content2="Trust us for comprehensive healthcare solutions tailored to your needs. Your health, our commitment."
         content1="Discover unparalleled healthcare at Sahad Hospitals. Our services encompass cutting-edge diagnostics, advanced treatments, and personalized care. From expert medical consultations to state-of-the-art facilities, we prioritize your well-being."
       />
-      <S />
+      <div className="mt-10">
+        <S />
+      </div>
+
       <WhyRegister />
     </>
   );

@@ -1,5 +1,5 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
-import banner from "../assets/images/banner1.png";
+// import banner from "../assets/images/banner1.png";
 import g1 from "../assets/images/s1.jpg";
 import g2 from "../assets/images/s2.jpg";
 import g3 from "../assets/images/s3.jpg";
@@ -18,15 +18,12 @@ export default function Gallery() {
   return (
     <div>
       <NavbarWithBreadcrums />
-      <img src={banner} alt="" className="w-full" />
       <section>
-        <div className="text-center my-8">
-          <h1 className="font-bold text-3xl md:text-4xl text-primary mb-2">
-            OUR GALLERY
-          </h1>
-          <span className="font-bold text-xl text-gray-600">
+        <div className="text-center my-8 p-4 bg-primary text-white">
+          <h1 className="font-bold text-3xl md:text-4xl mb-2">OUR GALLERY</h1>
+          <span className="font-bold text-xl">
             We offer extensive medical procedures to outbound and inbound
-            patients.
+            patients, here are some of our pictures.
           </span>
         </div>
         <div className="grid md:grid-cols-3 gap-4 p-4">

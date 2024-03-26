@@ -1,9 +1,7 @@
 import { ArrowUp, CalendarCheck, Cog, Heart } from "lucide-react";
 import doctor from "../../assets/images/s4.jpg";
-import { Card } from "../ui/card";
-import { Testimonials } from "./Testimonials";
 
-const whyRegister = [
+const chooseUs = [
   {
     content:
       "Consultants of all specialties are now able to register for remote working at the Virtual Hospital",
@@ -29,13 +27,11 @@ export const WhyRegister = () => {
   return (
     <>
       <div className="md:p-20 p-6">
-        <div className="grid w-[90%] mx-auto gap-4 place-content-center place-items-center  md:grid-cols-2">
-          <div className="">
-            <p className="text-3xl md:my-10 text-center md:text-left">
-              WHY CHOOSE SAHAD HOSPITAL?
-            </p>
-            <div className="place-items-center gap-4 grid md:grid-cols-2 mt-4">
-              {whyRegister.map((a) => (
+        <div className="grid w-[90%] mx-auto gap-4 md:grid-cols-2">
+          <div>
+            <p className="text-3xl text-center md:text-left">WHY CHOOSE US?</p>
+            <div className="gap-4 grid md:grid-cols-2 mt-4">
+              {chooseUs.map((a) => (
                 <div className="flex items-center gap-4">
                   <a.icon className=" h-24 w-24 text-info" />
                   {a.content}
@@ -43,30 +39,7 @@ export const WhyRegister = () => {
               ))}
             </div>
           </div>
-          <div className="">
-            <img className="rounded-xl" src={doctor} alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="bg-primary my-10 p-10">
-        <p className="text-2xl text-center p-10 font-bold text-white">
-          THANK YOU FOR CHOOSING SAHAD HOSPITAL
-        </p>
-        <div className="grid gap-4 md:grid-cols-2 p-2">
-          <Card className="bg-slate-100/10 border-none">
-            <Testimonials
-              title="Managing Director"
-              name="Aisha Muhammad Sani"
-              content="As a healthcare business there is nothing more important than taking care of our people and its important that everyone who works with us feels The Beyond Expectations in everything we do. Welcome to the MedeVolt family!"
-            />
-          </Card>
-          <Card className="bg-slate-100/10 border-none">
-            <Testimonials
-              title="Managing Director"
-              name="Aisha Muhammad Sani"
-              content="As a healthcare business there is nothing more important than taking care of our people and its important that everyone who works with us feels The Beyond Expectations in everything we do. Welcome to the MedeVolt family!"
-            />
-          </Card>
+          <img className="rounded-xl hidden md:block" src={doctor} alt="" />
         </div>
       </div>
     </>

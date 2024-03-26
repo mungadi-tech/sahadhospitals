@@ -12,7 +12,7 @@ export const BookAnAppointment = ({
   content2,
 }: BookAnAppointmentprops) => {
   return (
-    <div className="bg-info text-center p-8 text-white">
+    <div className="bg-info text-center p-4 text-white">
       <div className="md:w-2/3 mx-auto">
         <span className=" font-extrabold text-3xl">{heading}</span>
         <p className=" mt-10 font-bold text-xl">{content1}</p>

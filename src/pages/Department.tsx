@@ -1,7 +1,4 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
-import { Card } from "@/components/ui/card";
-import { Testimonials } from "@/components/layout/Testimonials";
-import { WhyRegister } from "@/components/layout/WhyRegister";
 import { Stethoscope } from "lucide-react";
 import dep from "../assets/images/dartments.jpg";
 import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
@@ -89,9 +86,8 @@ export default function Department() {
             compassion. From cutting-edge diagnostics to innovative treatments,
             our dedicated teams ensure comprehensive care."
       />
-
-      <section className="md:flex mt-10">
-        <img src={dep} className="w-[30%]" />
+      <section className="md:flex my-10">
+        <img src={dep} className="w-[40%] hidden md:block" />
         <div className="grid md:grid-cols-3">
           {departments.map((d) => (
             <div className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-primary to-secondary hover:text-white">
@@ -106,28 +102,6 @@ export default function Department() {
           ))}
         </div>
       </section>
-      <WhyRegister />
-      <div className="bg-primary my-10 p-10">
-        <p className="text-2xl text-center p-10 font-bold text-white">
-          THANK YOU FOR CHOOSING MEDEVOLT HEALTHCARE
-        </p>
-        <div className="grid gap-4 md:grid-cols-2 p-2">
-          <Card className="bg-slate-100/10 border-none">
-            <Testimonials
-              title="Managing Director"
-              name="Aisha Muhammad Sani"
-              content="As a healthcare business there is nothing more important than taking care of our people and its important that everyone who works with us feels The Beyond Expectations in everything we do. Welcome to the MedeVolt family!"
-            />
-          </Card>
-          <Card className="bg-slate-100/10 border-none">
-            <Testimonials
-              title="Managing Director"
-              name="Aisha Muhammad Sani"
-              content="As a healthcare business there is nothing more important than taking care of our people and its important that everyone who works with us feels The Beyond Expectations in everything we do. Welcome to the MedeVolt family!"
-            />
-          </Card>
-        </div>
-      </div>
     </>
   );
 }
