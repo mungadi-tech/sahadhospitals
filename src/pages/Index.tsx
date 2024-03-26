@@ -50,7 +50,7 @@ export default function Index() {
               Meet the Top Management Team
             </span>
           </div>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-4 gap-4 px-10">
             <Team
               image={chairman}
               name="Alh Ibrahim Mijinyawa"
@@ -69,13 +69,18 @@ export default function Index() {
               title="CMD"
               twitter=""
             />
-            <Team image={cmac} name="John Doe" title="CMAC" twitter="" />
+            <Team
+              image={cmac}
+              name="Dr Muawiyya Zagga"
+              title="CMAC"
+              twitter=""
+            />
           </div>
-          <div className="mt-4 text-gray-600 text-2xl flex justify-center hover:text-secondary">
+          {/* <div className="mt-4 text-gray-600 text-2xl flex justify-center hover:text-secondary">
             <Link to={"/team"} className="shadow-md p-2">
               View More
             </Link>
-          </div>
+          </div> */}
         </section>
       </div>
     </>
