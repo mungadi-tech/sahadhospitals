@@ -43,13 +43,10 @@ export const Hero = () => {
             </ShimmerButton>
           </div>
         </div>
-
-        {/* <HeroCarousel /> */}
       </div>
       <div className="relative p-4 flex gap-2 md:gap-10 justify-center items-center -mt-10 md:-mt-20">
         <div className="bg-tertiary p-2 md:p-7 w-32 md:w-72 rounded-md text-white text-xs flex gap-2 items-center justify-between">
           <p className="flex gap-1">
-            <span className="hidden md:block font-mono">Book an</span>{" "}
             <span className="font-mono">Appointment</span>
           </p>
           <Calendar className="md:h-14 md:w-14" />
