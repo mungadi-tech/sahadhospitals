@@ -8,7 +8,7 @@ import { useScrollDetect } from "@/lib/utils";
 export const Hero = () => {
   const { isScrolling } = useScrollDetect();
   return (
-    <div className={`md:mt-1 ${!isScrolling && "mt-14"}`}>
+    <motion.div animate={{ marginTop: isScrolling ? 0 : "3rem" }}>
       <div className="flex">
         <img
           className="w-full lg:h-[45rem] md:h-[35rem] h-64"
@@ -32,7 +32,7 @@ export const Hero = () => {
           >
             Welcome to Sahad hospitals
           </motion.span>
-          <div className="z-10 md:mt-6">
+          <div className="md:mt-6">
             <ShimmerButton
               className="shadow-2xl"
               background="rgb(145, 195, 253)"
@@ -58,6 +58,6 @@ export const Hero = () => {
           Feedback <Hospital className="md:h-14 md:w-14" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

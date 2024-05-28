@@ -18,7 +18,7 @@ export function News() {
         <BentoCard
           key={feature.name}
           {...feature}
-          className=""
+          className="text-xs md:text-sm"
           Icon={Newspaper}
           cta="Read More"
         />

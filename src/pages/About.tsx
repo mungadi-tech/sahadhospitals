@@ -13,7 +13,7 @@ export default function About() {
 
       <MagicContainer className={"p-4 container my-20"}>
         <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-          <p className="font-serif">
+          <p className="font-serif md:text-md text-sm">
             Sahad Hospital is a reputable healthcare facility with a capacity of
             200 beds and 7 operating theaters. Known for its commitment to
             providing high-quality healthcare services, Sahad Hospital has
@@ -27,7 +27,7 @@ export default function About() {
             comprehensive range of surgical services and meet the diverse needs
             of patients.
           </p>
-          <p className="font-serif mt-10">
+          <p className="font-serif mt-10  md:text-md text-sm">
             The team at Sahad Hospital consists of highly skilled and
             experienced medical professionals who are dedicated to delivering
             exceptional care. From surgeons and physicians to nurses and support
@@ -48,7 +48,7 @@ export default function About() {
         </MagicCard>
       </MagicContainer>
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
-        <MagicContainer className={"h-[35rem]"}>
+        <MagicContainer className={"hidden md:flex h-[35rem]"}>
           <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
             <img
               className="hidden absolute md:block w-full h-full  rounded-md"
@@ -62,7 +62,7 @@ export default function About() {
             <h1 className="text-sm text-blue-500 uppercase font-bold">
               WELCOME TO SAHAD HOSPITALS
             </h1>
-            <h1 className="text-4xl text-tertiary font-bold font-mono">
+            <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
               Best Care for Your Good Health
             </h1>
             <div className="mt-10">

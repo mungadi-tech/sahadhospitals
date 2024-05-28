@@ -20,7 +20,7 @@ export const NavbarWithBreadcrums = () => {
   return (
     <motion.div
       animate={{
-        marginTop: isScrolling ? 0 : 60,
+        marginTop: isScrolling ? 0 : 50,
         opacity: 1,
         y: 0,
       }}

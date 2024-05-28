@@ -55,7 +55,7 @@ export function About() {
           </Link>
         </div>
 
-        <div className="font-mono grid grid-cols-3 rounded-md md:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
+        <div className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md md:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
           <div className="flex flex-col items-center justify-center p-2">
             <span className="text-xl font-bold">
               <NumberTicker value={200} className="text-white" />
