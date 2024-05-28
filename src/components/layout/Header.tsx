@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import ShimmerButton from "../ui/simmer-button";
 import { CaretDownIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
-import { Clock, MapPinIcon, PhoneCall, X } from "lucide-react";
+import { Clock, MapPinIcon, PhoneCall } from "lucide-react";
 import { useScrollDetect } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
