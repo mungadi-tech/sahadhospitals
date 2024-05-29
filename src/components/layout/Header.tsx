@@ -91,11 +91,13 @@ export const Header = () => {
                     <ul className="flex flex-col gap-4">
                       {nav_links.map((l) =>
                         l.title == "Services" ? (
-                          <li>
+                          <li key={l.title}>
                             <ServicesList />
                           </li>
                         ) : l.title == "Departments" ? (
-                          <DepartmentList />
+                          <li key={l.title}>
+                            <DepartmentList />
+                          </li>
                         ) : (
                           <li key={l.href} className="hover:underline">
                             <Link to={l.href}>{l.title}</Link>
@@ -111,11 +113,13 @@ export const Header = () => {
               <ul className="flex gap-4">
                 {nav_links.map((l) =>
                   l.title == "Services" ? (
-                    <li>
+                    <li key={l.title}>
                       <ServicesList />
                     </li>
                   ) : l.title == "Departments" ? (
-                    <DepartmentList />
+                    <li key={l.title}>
+                      <DepartmentList />
+                    </li>
                   ) : (
                     <li key={l.href} className="hover:underline">
                       <Link to={l.href}>{l.title}</Link>
@@ -147,11 +151,13 @@ export const Header = () => {
                     <ul className="flex flex-col gap-4">
                       {nav_links.map((l) =>
                         l.title == "Services" ? (
-                          <li>
+                          <li key={l.title}>
                             <ServicesList />
                           </li>
                         ) : l.title == "Departments" ? (
-                          <DepartmentList />
+                          <li key={l.href}>
+                            <DepartmentList />
+                          </li>
                         ) : (
                           <li key={l.href} className="hover:underline">
                             <Link to={l.href}>{l.title}</Link>
@@ -167,11 +173,13 @@ export const Header = () => {
               <ul className="flex gap-4">
                 {nav_links.map((l) =>
                   l.title == "Services" ? (
-                    <li>
+                    <li key={l.title}>
                       <ServicesList />
                     </li>
                   ) : l.title == "Departments" ? (
-                    <DepartmentList />
+                    <li key={l.title}>
+                      <DepartmentList />
+                    </li>
                   ) : (
                     <li key={l.href} className="hover:underline">
                       <Link to={l.href}>{l.title}</Link>

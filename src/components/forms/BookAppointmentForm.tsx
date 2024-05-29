@@ -70,28 +70,26 @@ function SelectForm() {
   });
   return (
     <Form {...form}>
-      <form>
-        <FormField
-          control={form.control}
-          name="gender"
-          render={({ field }) => (
-            <FormItem>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl className="w-full border-tertiary h-14">
-                  <SelectTrigger>
-                    <SelectValue placeholder="Gender" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="MALE">MALE</SelectItem>
-                  <SelectItem value="FEMALE">FEMALE</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </form>
+      <FormField
+        control={form.control}
+        name="gender"
+        render={({ field }) => (
+          <FormItem>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl className="w-full border-tertiary h-14">
+                <SelectTrigger>
+                  <SelectValue placeholder="Gender" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="MALE">MALE</SelectItem>
+                <SelectItem value="FEMALE">FEMALE</SelectItem>
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
     </Form>
   );
 }
@@ -110,33 +108,31 @@ function DepartmentSelectForm() {
   });
   return (
     <Form {...form}>
-      <form>
-        <FormField
-          control={form.control}
-          name="dept"
-          render={({ field }) => (
-            <FormItem>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl className="w-full border-tertiary h-14">
-                  <SelectTrigger>
-                    <SelectValue placeholder="Department" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="gmedcine">General Medicine</SelectItem>
-                  <SelectItem value="cardiology">Cardiology</SelectItem>
-                  <SelectItem value="orthopedics">Orthopedics</SelectItem>
-                  <SelectItem value="nephrology">Nephrology</SelectItem>
-                  <SelectItem value="paediatrics">Peadiatrics</SelectItem>
-                  <SelectItem value="obsetrics">Obsetrics</SelectItem>
-                  <SelectItem value="gynaecology">Gynaecology</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </form>
+      <FormField
+        control={form.control}
+        name="dept"
+        render={({ field }) => (
+          <FormItem>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl className="w-full border-tertiary h-14">
+                <SelectTrigger>
+                  <SelectValue placeholder="Department" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="gmedcine">General Medicine</SelectItem>
+                <SelectItem value="cardiology">Cardiology</SelectItem>
+                <SelectItem value="orthopedics">Orthopedics</SelectItem>
+                <SelectItem value="nephrology">Nephrology</SelectItem>
+                <SelectItem value="paediatrics">Peadiatrics</SelectItem>
+                <SelectItem value="obsetrics">Obsetrics</SelectItem>
+                <SelectItem value="gynaecology">Gynaecology</SelectItem>
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
     </Form>
   );
 }
@@ -155,28 +151,26 @@ function DoctorSelectForm() {
   });
   return (
     <Form {...form}>
-      <form>
-        <FormField
-          control={form.control}
-          name="doctor"
-          render={({ field }) => (
-            <FormItem>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl className="w-full border-tertiary h-14">
-                  <SelectTrigger>
-                    <SelectValue placeholder="Doctor" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="MALE">doctor</SelectItem>
-                  <SelectItem value="FEMALE">doctor</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </form>
+      <FormField
+        control={form.control}
+        name="doctor"
+        render={({ field }) => (
+          <FormItem>
+            <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl className="w-full border-tertiary h-14">
+                <SelectTrigger>
+                  <SelectValue placeholder="Doctor" />
+                </SelectTrigger>
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="MALE">doctor</SelectItem>
+                <SelectItem value="FEMALE">doctor</SelectItem>
+              </SelectContent>
+            </Select>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
     </Form>
   );
 }

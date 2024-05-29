@@ -100,7 +100,10 @@ export default function Department() {
         <img src={dep} className="w-[40%] hidden lg:block md:hidden" />
         <div className="grid md:grid-cols-3">
           {departments.map((d) => (
-            <div className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-tertiary to-info hover:text-white">
+            <div
+              key={d.title}
+              className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-tertiary to-info hover:text-white"
+            >
               {<d.icon className="size-6 text-info group-hover:text-white" />}
               <span className="text-xl text-center font-mono font-bold text-gray-800 group-hover:text-white">
                 {d.title}

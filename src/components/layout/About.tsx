@@ -142,7 +142,7 @@ function MiniServices() {
           <div className="flex gap-4 justify-between">
             <div className="flex flex-col gap-2 font-mono">
               {surgeries.map((s) => (
-                <MagicContainer>
+                <MagicContainer key={s.title}>
                   <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden  shadow-2xl">
                     <s.icon className="md:w-10 md:h-10 stroke-info group-hover:stroke-white" />
                     <span className="text-gray-700 text-xs md:text-md text-center group-hover:text-white">
@@ -197,7 +197,7 @@ const WhyChooseUs = () => {
       <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
         <div className="gap-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-4 md:p-4">
           {chooseUs.map((a) => (
-            <div className="md:mx-10 lg:mt-8">
+            <div key={a.title} className="md:mx-10 lg:mt-8">
               <div className="flex flex-col items-center gap-4 font-mono text-center">
                 <a.icon className="md:h-14 md:w-14 stroke-info" />
                 <span className="text-xs">{a.title}</span>

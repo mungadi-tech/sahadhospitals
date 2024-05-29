@@ -78,7 +78,12 @@ export const Footer = () => {
               </li>
               <li className="flex gap-2 hover:text-secondary">
                 <Phone className="text-secondary h-6 w-6" />
-                <span>+234(0)7049227730, +234(0)8039591800</span>
+                <div className="flex flex-col">
+                  <span>+234(0)7049227730</span>
+                  <span> +234(0)8039591800</span>
+                  <span>+234(0)7011111111</span>
+                  <span>+234(0)7070222222</span>
+                </div>
               </li>
               <li className="flex items-center gap-2 hover:text-secondary">
                 <EnvelopeClosedIcon className="text-secondary h-6 w-6" />
