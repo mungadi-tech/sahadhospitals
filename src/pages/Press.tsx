@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 
 export default function PressRelease() {
@@ -5,7 +6,7 @@ export default function PressRelease() {
     <>
       <NavbarWithBreadcrums />
 
-      <div className="container rounded-md gap-2 my-12 md:p-4 bg-gradient-to-tr from-info to-tertiary relative flex flex-col items-center justify-center antialiased">
+      <Reveal className="container rounded-md gap-2 my-12 md:p-4 bg-gradient-to-tr from-info to-tertiary relative flex flex-col items-center justify-center antialiased">
         <iframe
           className="rounded-md"
           width="560"
@@ -57,7 +58,7 @@ export default function PressRelease() {
 
           <p>🌍 Obika_Media_Team.</p>
         </article>
-      </div>
+      </Reveal>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { Newspaper } from "lucide-react";
 
@@ -12,7 +13,7 @@ const features = [
 ];
 export default function NewsPage() {
   return (
-    <section className="p-2 my-24">
+    <Reveal className="p-2 my-24">
       <div className="text-center my-8">
         <h1 className="font-bold text-xl text-primary">LATEST NEWS</h1>
         <span className="text-lg md:text-2xl text-gray-600">
@@ -22,7 +23,7 @@ export default function NewsPage() {
       <div className="mt-24">
         <News />
       </div>
-    </section>
+    </Reveal>
   );
 }
 

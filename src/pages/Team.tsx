@@ -7,13 +7,14 @@ import hr from "../assets/images/cor.png";
 import chairman from "../assets/images/chairman.png";
 import vc from "../assets/images/vc.png";
 import cmac from "../assets/images/cmac.png";
+import Reveal from "@/components/Reveal";
 
 export default function Team() {
   return (
     <div>
       <NavbarWithBreadcrums />
 
-      <section>
+      <Reveal>
         <div className="text-center my-8">
           <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
             LEADING TEAM
@@ -39,7 +40,7 @@ export default function Team() {
             title="GM Finance/Account"
           />
         </div>
-      </section>
+      </Reveal>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import {
   Webhook,
 } from "lucide-react";
 import dep from "../assets/images/dartments.jpg";
+import Reveal from "@/components/Reveal";
 
 const departments = [
   {
@@ -88,7 +89,7 @@ const departments = [
 ];
 export default function Department() {
   return (
-    <section className="md:p-10 mt-14">
+    <Reveal className="md:p-10 mt-14">
       <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
         Always Caring
       </h1>
@@ -111,6 +112,6 @@ export default function Department() {
           ))}
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }

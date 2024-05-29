@@ -1,10 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-
+const Index = lazy(() => import("./pages/Index"));
 import { Layout } from "./components/layout/Layout";
 import { Toaster } from "sonner";
-import Spinner from "./components/ui/spinner";
-import Index from "./pages/Index";
 
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -21,10 +19,17 @@ function App() {
       <Toaster richColors />
       <Routes>
         <Route element={<Layout />}>
-          <Route element={<Index />} path="/" />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
+                <Index />
+              </Suspense>
+            }
+            path="/"
+          />
+          <Route
+            element={
+              <Suspense fallback={""}>
                 <About />
               </Suspense>
             }
@@ -32,7 +37,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <Department />
               </Suspense>
             }
@@ -40,7 +45,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <Contact />
               </Suspense>
             }
@@ -48,7 +53,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <Services />
               </Suspense>
             }
@@ -56,7 +61,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <NewsPage />
               </Suspense>
             }
@@ -64,7 +69,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <PressRelease />
               </Suspense>
             }
@@ -72,7 +77,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <PressRelease />
               </Suspense>
             }
@@ -80,7 +85,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <Gallery />
               </Suspense>
             }
@@ -88,7 +93,7 @@ function App() {
           />
           <Route
             element={
-              <Suspense fallback={<Spinner />}>
+              <Suspense fallback={""}>
                 <Team />
               </Suspense>
             }

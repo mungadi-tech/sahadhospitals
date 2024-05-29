@@ -19,12 +19,13 @@ import g16 from "../assets/images/lab_2.jpg";
 import g17 from "../assets/images/s7.jpg";
 
 import { GalleryCard } from "@/components/layout/GalleryCard";
+import Reveal from "@/components/Reveal";
 
 export default function Gallery() {
   return (
-    <div>
+    <>
       <NavbarWithBreadcrums />
-      <section>
+      <Reveal>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
           <GalleryCard title="Private ICU" desc="" image={g1} />
           <GalleryCard title="Chemistry Laboratory" desc="" image={g2} />
@@ -47,7 +48,7 @@ export default function Gallery() {
           />
           <GalleryCard title=" Water Treatment System" desc="" image={g17} />
         </div>
-      </section>
-    </div>
+      </Reveal>
+    </>
   );
 }

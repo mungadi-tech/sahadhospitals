@@ -77,7 +77,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-b {
-  background-color: hsl(224, 64%, 33%);
-}

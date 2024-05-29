@@ -32,7 +32,6 @@ export default function Contact() {
     <>
       <NavbarWithBreadcrums />
       <section className="bg-gradient-to-l from-primary to-secondary grid md:grid-cols-2 gap-4 my-14 p-4 mx-auto text-white">
-        <BackgroundBeams />
         <div className="flex flex-col gap-2">
           {info.map((i) => (
             <div className="flex gap-2 mt-4 items-center">
