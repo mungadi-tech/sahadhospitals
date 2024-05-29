@@ -1,4 +1,5 @@
 import { Badge } from "../ui/badge";
+import { MagicCard } from "../ui/magic-card";
 
 interface TeamTypes {
   name: string;
@@ -8,7 +9,7 @@ interface TeamTypes {
 
 export const Team = ({ name, title, image }: TeamTypes) => {
   return (
-    <div className="border rounded-md p-4 bg-slate-200">
+    <MagicCard>
       <img src={image} className="h-[10rem] w-[10rem] mx-auto rounded-full" />
       <div className="flex gap-2 justify-between p-2">
         <span className="font-bold text-[14px]">{name}</span>
@@ -16,6 +17,6 @@ export const Team = ({ name, title, image }: TeamTypes) => {
           {title}
         </Badge>
       </div>
-    </div>
+    </MagicCard>
   );
 };
