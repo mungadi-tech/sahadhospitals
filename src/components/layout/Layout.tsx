@@ -5,14 +5,14 @@ import Reveal from "../Reveal";
 
 export const Layout = () => {
   return (
-    <>
+    <main className="flex flex-col justify-between">
       <Header />
-      <main className="flex flex-col mt-28">
+      <div className="flex flex-col mt-28">
         <Outlet />
-      </main>
+      </div>
       <Reveal>
         <Footer />
       </Reveal>
-    </>
+    </main>
   );
 };
