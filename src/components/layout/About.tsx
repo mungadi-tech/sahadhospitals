@@ -20,6 +20,32 @@ import { MagicCard, MagicContainer } from "../ui/magic-card";
 import ShimmerButton from "../ui/simmer-button";
 import Reveal from "../Reveal";
 
+const counter = [
+  {
+    title: "Bed Spaces",
+    count: 200,
+  },
+  {
+    title: "Specialties",
+    count: 20,
+  },
+  {
+    title: "Caregivers",
+    count: 200,
+  },
+  {
+    title: "Operating Theartres",
+    count: 7,
+  },
+  {
+    title: "Critical Care Beds",
+    count: 10,
+  },
+  {
+    title: "Dialysis Beds",
+    count: 13,
+  },
+];
 export function About() {
   const aboutRef = useRef(null);
 
@@ -56,43 +82,19 @@ export function About() {
           </Link>
         </div>
 
-        <Reveal className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md md:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={200} className="text-white" />
-            </span>
-            <span className="md:text-sm text-center">Bed Spaces</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={20} className="text-white" />+
-            </span>
-            <span className="md:text-sm text-center">Specialties</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={200} className="text-white" />+
-            </span>
-            <span className="md:text-sm text-center">Caregivers</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={7} className="text-white" />+
-            </span>
-            <span className="md:text-sm text-center">Operating Theartres</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={10} className="text-white " />+
-            </span>
-            <span className="md:text-sm text-center">Critical care beds</span>
-          </div>
-          <div className="flex flex-col items-center justify-center p-2">
-            <span className="text-xl font-bold">
-              <NumberTicker value={13} className="text-white" />+
-            </span>
-            <span className="md:text-sm text-center">Dialysis Beds</span>
-          </div>
+        <Reveal className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md lg:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
+          {counter.map((c) => (
+            <div
+              key={c.title}
+              className="flex flex-col items-center justify-center p-2"
+            >
+              <span className="text-xl font-bold">
+                <NumberTicker value={c.count} className="text-white text-4xl" />
+                +
+              </span>
+              <span className="md:text-2xl text-center">{c.title}</span>
+            </div>
+          ))}
         </Reveal>
       </div>
 
