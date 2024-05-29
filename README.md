@@ -12,13 +12,3 @@ See Convex docs at https://docs.convex.dev/home
 ```
 npm create convex@latest -t react-vite-shadcn
 ```
-
-"predev": "convex dev --until-success && convex dashboard",
-"dev": "npm-run-all --parallel dev:frontend dev:backend",
-
-    Home
-    About Us
-    Services
-    Department
-    Gallery
-    Health Packages

@@ -1,5 +1,5 @@
-// import physician from "../../assets/images/physician.png";
-import building from "../../assets/images/front.jpg";
+import physician from "../../assets/images/physician.png";
+// import building from "../../assets/images/front.jpg";
 import ShimmerButton from "../ui/simmer-button";
 import { Calendar, Hospital, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
@@ -10,13 +10,13 @@ export const Hero = () => {
   const { isScrolling } = useScrollDetect();
   return (
     <motion.div
-      animate={{ marginTop: isScrolling ? 0 : "4rem" }}
+      animate={{ marginTop: isScrolling ? 0 : "3rem" }}
       transition={{ duration: 0.5, delay: 0.25 }}
     >
       <div className="flex">
         <img
           className="w-full lg:h-[45rem] md:h-[35rem] h-64"
-          src={building}
+          src={physician}
           alt=""
         />
         <Reveal className="absolute mt-14 flex flex-col md:gap-4 md:mt-28  w-[17rem] md:w-[42rem] lg:w-[60rem] md:p-10 lg:p-20 p-4">
