@@ -15,7 +15,7 @@ export const Hero = () => {
     >
       <div className="flex">
         <img
-          className="w-full lg:h-[45rem] md:h-[35rem] h-64"
+          className="w-full lg:h-[45rem] md:h-[30rem] h-56"
           src={physician}
           alt=""
         />
