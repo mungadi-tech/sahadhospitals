@@ -5,110 +5,118 @@ import site from "../assets/images/front.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MagicCard, MagicContainer } from "@/components/ui/magic-card";
+import Reveal from "@/components/Reveal";
 
 export default function About() {
   return (
-    <div>
+    <>
       <NavbarWithBreadcrums />
-
-      <MagicContainer className={"p-4 container my-20"}>
-        <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-          <p className="font-serif md:text-md text-sm">
-            Sahad Hospital is a reputable healthcare facility with a capacity of
-            200 beds and 7 operating theaters. Known for its commitment to
-            providing high-quality healthcare services, Sahad Hospital has
-            become a trusted name in the industry. The hospital boasts
-            state-of-the-art facilities and equipment, ensuring that patients
-            receive the best possible care. The 200-bed capacity allows for the
-            accommodation of a wide range of medical conditions and ensures that
-            patients can be treated promptly. With 7 operating theaters, Sahad
-            Hospital is well-equipped to handle complex surgical procedures
-            across various specialties. This enables the hospital to offer a
-            comprehensive range of surgical services and meet the diverse needs
-            of patients.
-          </p>
-          <p className="font-serif mt-10  md:text-md text-sm">
-            The team at Sahad Hospital consists of highly skilled and
-            experienced medical professionals who are dedicated to delivering
-            exceptional care. From surgeons and physicians to nurses and support
-            staff, every member of the team is committed to providing
-            personalized treatment plans and ensuring patient comfort throughout
-            their stay. In addition to its impressive infrastructure and medical
-            expertise, Sahad Hospital also places great importance on patient
-            satisfaction. The hospital strives to create a warm and welcoming
-            environment for patients, emphasizing compassionate care alongside
-            professional excellence. Overall, Sahad Hospital's commitment to
-            delivering high-quality healthcare services combined with its
-            advanced facilities make it an esteemed institution in the
-            healthcare industry. Patients can trust Sahad Hospital for their
-            medical needs knowing they will receive top-notch care from a
-            dedicated team of experts.
-          </p>
-          <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
-        </MagicCard>
-      </MagicContainer>
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
-        <MagicContainer className={"hidden md:flex h-[35rem]"}>
-          <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
-            <img
-              className="hidden absolute md:block w-full h-full  rounded-md"
-              src={site}
-              alt=""
-            />
-          </MagicCard>
-        </MagicContainer>
-        <MagicContainer>
+      <Reveal>
+        <MagicContainer className={"p-4 container my-20"}>
           <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-            <h1 className="text-sm text-blue-500 uppercase font-bold">
-              WELCOME TO SAHAD HOSPITALS
-            </h1>
-            <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
-              Best Care for Your Good Health
-            </h1>
-            <div className="mt-10">
-              <Mission />
-            </div>
+            <p className="font-serif md:text-md text-sm">
+              Sahad Hospital is a reputable healthcare facility with a capacity
+              of 200 beds and 7 operating theaters. Known for its commitment to
+              providing high-quality healthcare services, Sahad Hospital has
+              become a trusted name in the industry. The hospital boasts
+              state-of-the-art facilities and equipment, ensuring that patients
+              receive the best possible care. The 200-bed capacity allows for
+              the accommodation of a wide range of medical conditions and
+              ensures that patients can be treated promptly. With 7 operating
+              theaters, Sahad Hospital is well-equipped to handle complex
+              surgical procedures across various specialties. This enables the
+              hospital to offer a comprehensive range of surgical services and
+              meet the diverse needs of patients.
+            </p>
+            <p className="font-serif mt-10  md:text-md text-sm">
+              The team at Sahad Hospital consists of highly skilled and
+              experienced medical professionals who are dedicated to delivering
+              exceptional care. From surgeons and physicians to nurses and
+              support staff, every member of the team is committed to providing
+              personalized treatment plans and ensuring patient comfort
+              throughout their stay. In addition to its impressive
+              infrastructure and medical expertise, Sahad Hospital also places
+              great importance on patient satisfaction. The hospital strives to
+              create a warm and welcoming environment for patients, emphasizing
+              compassionate care alongside professional excellence. Overall,
+              Sahad Hospital's commitment to delivering high-quality healthcare
+              services combined with its advanced facilities make it an esteemed
+              institution in the healthcare industry. Patients can trust Sahad
+              Hospital for their medical needs knowing they will receive
+              top-notch care from a dedicated team of experts.
+            </p>
+            <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
           </MagicCard>
         </MagicContainer>
-      </div>
+      </Reveal>
 
-      <div className="grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white bg-gradient-to-r from-tertiary to-info">
-        <div className="my-4">
-          <h1 className="font-bold text-2xl">WHAT WE OFFER</h1>
-          <div className="mt-2">
-            <p>
-              Sahad Hospitals offer cutting-edge technology, expert care, and
-              personalized service for superior healthcare. Trust our commitment
-              to excellence and comprehensive services for your well-being. Your
-              health, our priority.
-            </p>
-            <ul className="mt-4 space-y-2">
-              <li className="flex gap-2 items-center">
-                <CheckCheck />
-                Family Medicine & Urgent Care
-              </li>
-              <li className="flex gap-2 items-center">
-                <CheckCheck />
-                Emergency Medicine & Critical Intensive Care
-              </li>
-              <li className="flex gap-2 items-center">
-                <CheckCheck />
-                Specialist Services
-              </li>
-              <li className="flex gap-2 items-center">
-                <CheckCheck />
-                Interventional Radiology & Imaging Services
-              </li>
-              <li className="flex gap-2 items-center">
-                <CheckCheck />
-                Laboratory Services
-              </li>
-            </ul>
-          </div>
-        </div>
-        <img className="w-full h-full rounded-md" src={g3} alt="" />
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
+        <Reveal>
+          <MagicContainer className={"hidden md:flex h-[35rem]"}>
+            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
+              <img
+                className="hidden absolute md:block w-full h-full  rounded-md"
+                src={site}
+                alt=""
+              />
+            </MagicCard>
+          </MagicContainer>
+        </Reveal>
+        <Reveal>
+          <MagicContainer>
+            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
+              <h1 className="text-sm text-blue-500 uppercase font-bold">
+                WELCOME TO SAHAD HOSPITALS
+              </h1>
+              <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
+                Best Care for Your Good Health
+              </h1>
+              <div className="mt-10">
+                <Mission />
+              </div>
+            </MagicCard>
+          </MagicContainer>
+        </Reveal>
       </div>
-    </div>
+      <Reveal>
+        <div className="grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white bg-gradient-to-r from-tertiary to-info">
+          <div className="my-4">
+            <h1 className="font-bold text-2xl">WHAT WE OFFER</h1>
+            <div className="mt-2">
+              <p>
+                Sahad Hospitals offer cutting-edge technology, expert care, and
+                personalized service for superior healthcare. Trust our
+                commitment to excellence and comprehensive services for your
+                well-being. Your health, our priority.
+              </p>
+              <ul className="mt-4 space-y-2">
+                <li className="flex gap-2 items-center">
+                  <CheckCheck />
+                  Family Medicine & Urgent Care
+                </li>
+                <li className="flex gap-2 items-center">
+                  <CheckCheck />
+                  Emergency Medicine & Critical Intensive Care
+                </li>
+                <li className="flex gap-2 items-center">
+                  <CheckCheck />
+                  Specialist Services
+                </li>
+                <li className="flex gap-2 items-center">
+                  <CheckCheck />
+                  Interventional Radiology & Imaging Services
+                </li>
+                <li className="flex gap-2 items-center">
+                  <CheckCheck />
+                  Laboratory Services
+                </li>
+              </ul>
+            </div>
+          </div>
+          <img className="w-full h-full rounded-md" src={g3} alt="" />
+        </div>
+      </Reveal>
+    </>
   );
 }
 

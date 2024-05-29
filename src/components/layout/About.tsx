@@ -18,6 +18,7 @@ import { useRef } from "react";
 import NumberTicker from "../ui/number-ticker";
 import { MagicCard, MagicContainer } from "../ui/magic-card";
 import ShimmerButton from "../ui/simmer-button";
+import Reveal from "../Reveal";
 
 export function About() {
   const aboutRef = useRef(null);
@@ -55,7 +56,7 @@ export function About() {
           </Link>
         </div>
 
-        <div className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md md:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
+        <Reveal className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md md:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
           <div className="flex flex-col items-center justify-center p-2">
             <span className="text-xl font-bold">
               <NumberTicker value={200} className="text-white" />
@@ -92,8 +93,9 @@ export function About() {
             </span>
             <span className="md:text-sm text-center">Dialysis Beds</span>
           </div>
-        </div>
+        </Reveal>
       </div>
+
       <MiniServices />
     </div>
   );
@@ -129,31 +131,35 @@ function MiniServices() {
       transition={{ ease: "easeIn" }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col justify-center">
-        <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
-          The Best Medics, Doctors & Physicians
-        </h1>
-        <h1 className="text-4xl mb-4 text-center text-tertiary font-bold font-mono">
-          Our Services
-        </h1>
-        <div className="flex gap-4 justify-between">
-          <div className="flex flex-col gap-2 font-mono">
-            {surgeries.map((s) => (
-              <MagicContainer>
-                <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden  shadow-2xl">
-                  <s.icon className="md:w-10 md:h-10 stroke-info group-hover:stroke-white" />
-                  <span className="text-gray-700 text-xs md:text-md text-center group-hover:text-white">
-                    {s.title}
-                  </span>
-                </MagicCard>
-              </MagicContainer>
-            ))}
+      <Reveal>
+        <div className="flex flex-col justify-center">
+          <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
+            The Best Medics, Doctors & Physicians
+          </h1>
+          <h1 className="text-4xl mb-4 text-center text-tertiary font-bold font-mono">
+            Our Services
+          </h1>
+          <div className="flex gap-4 justify-between">
+            <div className="flex flex-col gap-2 font-mono">
+              {surgeries.map((s) => (
+                <MagicContainer>
+                  <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden  shadow-2xl">
+                    <s.icon className="md:w-10 md:h-10 stroke-info group-hover:stroke-white" />
+                    <span className="text-gray-700 text-xs md:text-md text-center group-hover:text-white">
+                      {s.title}
+                    </span>
+                  </MagicCard>
+                </MagicContainer>
+              ))}
 
-            <ShimmerButton background="rgb(30 58 138)">View All</ShimmerButton>
+              <ShimmerButton background="rgb(30 58 138)">
+                View All
+              </ShimmerButton>
+            </div>
+            <WhyChooseUs />
           </div>
-          <WhyChooseUs />
         </div>
-      </div>
+      </Reveal>
     </motion.div>
   );
 }

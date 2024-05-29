@@ -1,9 +1,10 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-const Index = lazy(() => import("./pages/Index"));
+
 import { Layout } from "./components/layout/Layout";
 import { Toaster } from "sonner";
 import Spinner from "./components/ui/spinner";
+import Index from "./pages/Index";
 
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -20,14 +21,7 @@ function App() {
       <Toaster richColors />
       <Routes>
         <Route element={<Layout />}>
-          <Route
-            element={
-              <Suspense fallback={<Spinner />}>
-                <Index />
-              </Suspense>
-            }
-            path="/"
-          />
+          <Route element={<Index />} path="/" />
           <Route
             element={
               <Suspense fallback={<Spinner />}>
