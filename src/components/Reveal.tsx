@@ -13,7 +13,7 @@ export default function Reveal({
   const revealAnimate = useAnimation();
   const revealRef = useRef(null);
 
-  const inView = useInView(revealRef, { once: true });
+  const inView = useInView(revealRef, { once: true, margin: "-20%" });
 
   useEffect(() => {
     if (inView) {
