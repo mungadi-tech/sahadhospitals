@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import img1 from "../../assets/images/dialysis.jpg";
 import img2 from "../../assets/images/nicu.jpg";
 import img3 from "../../assets/images/privateicu.jpg";
-import { Button } from "../ui/button";
 import { useScrollDetect } from "@/lib/utils";
+import ShimmerButton from "../ui/simmer-button";
 
 const images = [img1, img2, img3];
 
@@ -35,7 +35,14 @@ export const NavbarWithBreadcrums = () => {
               Home <ArrowBigRight /> {bread}
             </div>
             <div className="my-4">
-              <Button color="green">Book an Appointment</Button>
+              <ShimmerButton
+                className="shadow-2xl"
+                background="rgb(145, 195, 253)"
+              >
+                <span className="whitespace-pre-wrap text-center font-medium leading-none md:text-lg tracking-tight text-white dark:from-white dark:to-slate-900/10">
+                  Book an Appointment
+                </span>
+              </ShimmerButton>
             </div>
           </div>
         </div>
