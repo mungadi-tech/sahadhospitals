@@ -11,10 +11,38 @@ export default function About() {
   return (
     <>
       <NavbarWithBreadcrums />
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
+        <Reveal>
+          <MagicContainer className={"hidden md:flex h-[30rem]"}>
+            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
+              <img
+                className="hidden absolute md:block w-full h-full  rounded-md"
+                src={site}
+                alt=""
+              />
+            </MagicCard>
+          </MagicContainer>
+        </Reveal>
+        <Reveal>
+          <MagicContainer>
+            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
+              <h1 className="text-sm text-blue-500 uppercase font-bold">
+                WELCOME TO SAHAD HOSPITALS
+              </h1>
+              <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
+                Best Care for Your Good Health
+              </h1>
+              <div className="mt-4">
+                <Mission />
+              </div>
+            </MagicCard>
+          </MagicContainer>
+        </Reveal>
+      </div>
       <Reveal>
         <MagicContainer className={"p-4 container my-20"}>
           <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-            <p className="font-serif md:text-md text-sm">
+            <p className="font-serif md:text-md text-xl">
               Sahad Hospital is a reputable healthcare facility with a capacity
               of 200 beds and 7 operating theaters. Known for its commitment to
               providing high-quality healthcare services, Sahad Hospital has
@@ -28,7 +56,7 @@ export default function About() {
               hospital to offer a comprehensive range of surgical services and
               meet the diverse needs of patients.
             </p>
-            <p className="font-serif mt-10  md:text-md text-sm">
+            <p className="font-serif mt-10  md:text-md text-xl">
               The team at Sahad Hospital consists of highly skilled and
               experienced medical professionals who are dedicated to delivering
               exceptional care. From surgeons and physicians to nurses and
@@ -50,39 +78,11 @@ export default function About() {
         </MagicContainer>
       </Reveal>
 
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
-        <Reveal>
-          <MagicContainer className={"hidden md:flex h-[35rem]"}>
-            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
-              <img
-                className="hidden absolute md:block w-full h-full  rounded-md"
-                src={site}
-                alt=""
-              />
-            </MagicCard>
-          </MagicContainer>
-        </Reveal>
-        <Reveal>
-          <MagicContainer>
-            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-              <h1 className="text-sm text-blue-500 uppercase font-bold">
-                WELCOME TO SAHAD HOSPITALS
-              </h1>
-              <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
-                Best Care for Your Good Health
-              </h1>
-              <div className="mt-10">
-                <Mission />
-              </div>
-            </MagicCard>
-          </MagicContainer>
-        </Reveal>
-      </div>
       <Reveal>
         <div className="grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white bg-gradient-to-r from-tertiary to-info">
           <div className="my-4">
-            <h1 className="font-bold text-2xl">WHAT WE OFFER</h1>
-            <div className="mt-2">
+            <h1 className="font-bold text-2xl font-mono">WHAT WE OFFER</h1>
+            <div className="mt-2 font-serif text-lg">
               <p>
                 Sahad Hospitals offer cutting-edge technology, expert care, and
                 personalized service for superior healthcare. Trust our
@@ -113,7 +113,7 @@ export default function About() {
               </ul>
             </div>
           </div>
-          <img className="w-full h-full rounded-md" src={g3} alt="" />
+          <img className="w-[40rem] h-[25rem] rounded-md" src={g3} alt="" />
         </div>
       </Reveal>
     </>

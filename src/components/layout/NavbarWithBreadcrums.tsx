@@ -35,10 +35,7 @@ export const NavbarWithBreadcrums = () => {
               Home <ArrowBigRight /> {bread}
             </div>
             <div className="my-4">
-              <ShimmerButton
-                className="shadow-2xl"
-                background="rgb(145, 195, 253)"
-              >
+              <ShimmerButton className="shadow-2xl" background="none">
                 <span className="whitespace-pre-wrap text-center font-medium leading-none md:text-lg tracking-tight text-white dark:from-white dark:to-slate-900/10">
                   Book an Appointment
                 </span>

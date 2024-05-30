@@ -33,8 +33,8 @@ export const Footer = () => {
         <div className="grid md:grid-cols-5 gap-4 p-4">
           <img src={logo} className="w-[70%]" alt="" />
           <div>
-            <h1 className="text-2xl mb-4">Departments</h1>
-            <ul className="flex flex-col gap-4">
+            <h1 className="text-2xl mb-4 font-mono">Departments</h1>
+            <ul className="flex flex-col gap-4 font-serif">
               {department.map((d) => (
                 <li key={d.name} className="flex gap-2 ">
                   <ArrowBigRight className="text-secondary" />
@@ -44,8 +44,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className="text-2xl mb-4">Links</h1>
-            <ul className="flex flex-col gap-4">
+            <h1 className="text-2xl mb-4 font-mono">Links</h1>
+            <ul className="flex flex-col gap-4 font-serif">
               {flinks.map((d) => (
                 <li key={d.name} className="">
                   <Link to={d.url} className="flex gap-2">
@@ -57,8 +57,8 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className="text-2xl mb-4">Services</h1>
-            <ul className="flex flex-col gap-4">
+            <h1 className="text-2xl mb-4 font-mono">Services</h1>
+            <ul className="flex flex-col gap-4 font-serif">
               {fservices.map((d) => (
                 <li key={d.name} className="flex gap-2 ">
                   <ArrowBigRight className="text-secondary" />
@@ -68,22 +68,22 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <h1 className="text-2xl mb-4">Have a question?</h1>
+            <h1 className="text-2xl mb-4 font-mono">Have a question?</h1>
             <ul className="flex flex-col gap-4">
-              <li className="flex gap-2">
+              <li className="flex gap-2 font-serif">
                 <Locate className="text-secondary h-6 w-6" />
                 <span>
                   Plot 1756 Cadastral zone E27 Apo Resettlement, Abuja
                 </span>
               </li>
-              <li className="flex gap-2 items-center">
+              <li className="flex gap-2 items-center font-serif">
                 <Phone className="text-secondary h-6 w-6" />
                 <div className="flex flex-col">
                   <span>+234(0)7070111111</span>
                   <span>+234(0)7070222222</span>
                 </div>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 font-serif">
                 <EnvelopeClosedIcon className="text-secondary h-6 w-6" />
                 <span>info@sahadhospitals.com</span>
               </li>
