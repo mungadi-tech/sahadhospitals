@@ -61,7 +61,7 @@ export const Header = () => {
         <div className="flex md:gap-10 gap-2">
           <div className="text-xs flex md:flex-row flex-col items-center gap-1 font-serif">
             <PhoneCall />
-            +2347049227730
+            +2347070111111
           </div>
           <div className="text-xs flex flex-col md:flex-row items-center gap-1 font-serif">
             <Clock /> 24/7

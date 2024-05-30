@@ -79,9 +79,7 @@ export const Footer = () => {
               <li className="flex gap-2 items-center">
                 <Phone className="text-secondary h-6 w-6" />
                 <div className="flex flex-col">
-                  <span>+234(0)7049227730</span>
-                  <span> +234(0)8039591800</span>
-                  <span>+234(0)7011111111</span>
+                  <span>+234(0)7070111111</span>
                   <span>+234(0)7070222222</span>
                 </div>
               </li>
