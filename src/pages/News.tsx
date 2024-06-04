@@ -13,10 +13,10 @@ const features = [
 ];
 export default function NewsPage() {
   return (
-    <Reveal className="p-2 my-24">
-      <div className="text-center my-8">
-        <h1 className="font-bold text-xl text-primary">LATEST NEWS</h1>
-        <span className="text-lg md:text-2xl text-gray-600">
+    <Reveal className="my-24 p-2">
+      <div className="my-8 text-center">
+        <h1 className="text-xl font-bold text-primary">LATEST NEWS</h1>
+        <span className="text-lg text-gray-600 md:text-2xl">
           Get Every Single Updates Here
         </span>
       </div>
@@ -29,7 +29,7 @@ export default function NewsPage() {
 
 export function News() {
   return (
-    <BentoGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:w-[90%] mx-auto p-4">
+    <BentoGrid className="mx-auto grid-cols-4 p-4 md:w-[90%] md:grid-cols-2 lg:grid-cols-3">
       {features.map((feature) => (
         <BentoCard
           key={feature.name}

@@ -83,7 +83,7 @@ export const Header = () => {
             opacity: 1,
             width: "100%",
           }}
-          className="fixed top-0 flex w-full items-center justify-between bg-blue-900"
+          className="fixed top-0 flex w-full items-center justify-between bg-tertiary"
         >
           <div className="flex w-full items-center justify-between px-8 py-4">
             <div className="md:hidden">
@@ -145,7 +145,7 @@ export const Header = () => {
           animate={{ opacity: 1, width: "100%" }}
           className="flex w-full items-center justify-between"
         >
-          <div className="flex w-full items-center justify-between bg-blue-900 px-8 py-4">
+          <div className="flex w-full items-center justify-between bg-tertiary px-8 py-4">
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger>

@@ -6,9 +6,9 @@ export default function PressRelease() {
     <>
       <NavbarWithBreadcrums />
 
-      <Reveal className="container rounded-md gap-2 my-12 md:p-4 bg-gradient-to-tr from-info to-tertiary relative flex flex-col items-center justify-center antialiased">
+      <Reveal className="container relative my-12 flex flex-col items-center justify-center gap-2 rounded-md bg-gradient-to-tr from-info to-tertiary py-4 antialiased md:p-4">
         <iframe
-          className="rounded-md"
+          className="w-[90%] rounded-md md:w-96"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/59N1l1mcprs?si=9qBy2SC28mGvEETu"
@@ -17,12 +17,12 @@ export default function PressRelease() {
         ></iframe>
 
         <article className="text-white">
-          <h1 className="text-xl mb-4">
+          <h1 className="mb-4 font-mono text-xl">
             💥 HON. JOSHUA CHINEDU OBIKA RECEIVED ON COURTESY, MGT STAFF OF
             SAHAD HOSPITAL ABUJA, LED BY THE DIRECTOR BUSINESS DEVELOPMENT AND
             CORPORATE COMMUNICATIONS, Mr. KELVIN OJONUGWA AKPALA
           </h1>
-          <p>
+          <p className="font-serif">
             Yesterday the lawmaker representing the hospitable people of
             AMAC/BWARI Federal Constituency FCT Abuja, Hon. Joshua Chinedu
             Obika; warmly received on courtesy, the MGT Staff of Sahad Hospital
@@ -36,7 +36,7 @@ export default function PressRelease() {
             services to the local community.
           </p>
           <br />
-          <p>
+          <p className="font-serif">
             The Director of Business Development and Corporate Communications of
             Sahad Hospital Mr. Kelvin Ojonugwa Akpala who Siezed the opportunity
             to discuss matters related to the grand opening of their state of
@@ -47,7 +47,7 @@ export default function PressRelease() {
             the lives of his constituents.
           </p>
           <br />
-          <p>
+          <p className="font-serif">
             Hon. Obika assured them of his total commitment to initiating
             government collaborations with Sahad Group considering their
             positive impacts to his constituents and pledged to work together
@@ -56,7 +56,7 @@ export default function PressRelease() {
           </p>
           <br />
 
-          <p>🌍 Obika_Media_Team.</p>
+          <p className="font-mono">🌍 Obika_Media_Team.</p>
         </article>
       </Reveal>
     </>
