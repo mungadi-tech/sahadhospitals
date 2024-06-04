@@ -79,41 +79,43 @@ export default function About() {
       </Reveal>
 
       <Reveal>
-        <div className="grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white bg-gradient-to-r from-tertiary to-info">
-          <div className="my-4">
-            <h1 className="font-bold text-2xl font-mono">WHAT WE OFFER</h1>
-            <div className="mt-2 font-serif text-lg">
-              <p>
-                Sahad Hospitals offer cutting-edge technology, expert care, and
-                personalized service for superior healthcare. Trust our
-                commitment to excellence and comprehensive services for your
-                well-being. Your health, our priority.
-              </p>
-              <ul className="mt-4 space-y-2">
-                <li className="flex gap-2 items-center">
-                  <CheckCheck />
-                  Family Medicine & Urgent Care
-                </li>
-                <li className="flex gap-2 items-center">
-                  <CheckCheck />
-                  Emergency Medicine & Critical Intensive Care
-                </li>
-                <li className="flex gap-2 items-center">
-                  <CheckCheck />
-                  Specialist Services
-                </li>
-                <li className="flex gap-2 items-center">
-                  <CheckCheck />
-                  Interventional Radiology & Imaging Services
-                </li>
-                <li className="flex gap-2 items-center">
-                  <CheckCheck />
-                  Laboratory Services
-                </li>
-              </ul>
+        <div className="bg-gradient-to-r from-tertiary to-info">
+          <div className="container grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white">
+            <div className="my-4">
+              <h1 className="font-bold text-2xl font-mono">WHAT WE OFFER</h1>
+              <div className="mt-2 font-serif text-lg">
+                <p>
+                  Sahad Hospitals offer cutting-edge technology, expert care,
+                  and personalized service for superior healthcare. Trust our
+                  commitment to excellence and comprehensive services for your
+                  well-being. Your health, our priority.
+                </p>
+                <ul className="mt-4 space-y-2">
+                  <li className="flex gap-2 items-center">
+                    <CheckCheck />
+                    Family Medicine & Urgent Care
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <CheckCheck />
+                    Emergency Medicine & Critical Intensive Care
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <CheckCheck />
+                    Specialist Services
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <CheckCheck />
+                    Interventional Radiology & Imaging Services
+                  </li>
+                  <li className="flex gap-2 items-center">
+                    <CheckCheck />
+                    Laboratory Services
+                  </li>
+                </ul>
+              </div>
             </div>
+            <img className="w-[40rem] h-[25rem] rounded-md" src={g3} alt="" />
           </div>
-          <img className="w-[40rem] h-[25rem] rounded-md" src={g3} alt="" />
         </div>
       </Reveal>
     </>
