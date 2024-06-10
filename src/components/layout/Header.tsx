@@ -10,6 +10,7 @@ import { useScrollDetect } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { DialogAppointmentShimmerForm } from "../forms/BookAppointmentForm";
+import { useState } from "react";
 
 const nav_links = [
   {
@@ -40,10 +41,17 @@ const nav_links = [
     title: "News",
     href: "news/",
   },
+  {
+    title: "Contact",
+    href: "contact/",
+  },
 ];
 
 export const Header = () => {
   const { isScrolling } = useScrollDetect();
+
+  const [open, setOpen] = useState(false);
+  const onOpenChange = () => setOpen(!open);
 
   return (
     <header className="fixed inset-x-0 top-0 z-10 w-full bg-transparent">
@@ -78,7 +86,7 @@ export const Header = () => {
         >
           <div className="flex w-full items-center justify-between px-8 py-4">
             <div className="md:hidden">
-              <Sheet>
+              <Sheet open={open} onOpenChange={onOpenChange}>
                 <SheetTrigger>
                   <HamburgerMenuIcon className="h-8 w-8 cursor-pointer stroke-white" />
                 </SheetTrigger>
@@ -86,7 +94,11 @@ export const Header = () => {
                   <div className="mt-10">
                     <ul className="flex flex-col gap-4">
                       {nav_links.map((l) => (
-                        <li key={l.href} className="hover:underline">
+                        <li
+                          onClick={onOpenChange}
+                          key={l.href}
+                          className="hover:underline"
+                        >
                           <Link to={l.href}>{l.title}</Link>
                         </li>
                       ))}
@@ -114,7 +126,7 @@ export const Header = () => {
         >
           <div className="flex w-full items-center justify-between bg-tertiary px-8 py-4">
             <div className="md:hidden">
-              <Sheet>
+              <Sheet open={open} onOpenChange={onOpenChange}>
                 <SheetTrigger>
                   <HamburgerMenuIcon className="h-8 w-8 cursor-pointer stroke-white" />
                 </SheetTrigger>
@@ -122,7 +134,11 @@ export const Header = () => {
                   <div className="mt-10">
                     <ul className="flex flex-col gap-4">
                       {nav_links.map((l) => (
-                        <li key={l.href} className="hover:underline">
+                        <li
+                          key={l.href}
+                          onClick={onOpenChange}
+                          className="hover:underline"
+                        >
                           <Link to={l.href}>{l.title}</Link>
                         </li>
                       ))}
