@@ -54,16 +54,16 @@ export function About() {
   });
 
   return (
-    <div className="md:my-14 p-4 md:w-[90%] mx-auto">
-      <div className="flex gap-4 flex-col justify-center items-center">
-        <motion.h1 className="uppercase font-mono font-bold text-info text-center">
+    <div className="mx-auto p-4 md:my-14 md:w-[90%]">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <motion.h1 className="text-center font-mono font-bold uppercase text-info">
           Your health is our priority
         </motion.h1>
         <motion.p
           ref={aboutRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="text-center font-serif text-gray-700 font-normal text-sm md:text-lg md:w-1/2"
+          className="text-center font-serif text-sm font-normal text-gray-700 md:w-1/2 md:text-lg"
         >
           Sahad Hospitals offer cutting-edge technology, expert care, and
           personalized service for superior healthcare. Trust our commitment to
@@ -75,24 +75,24 @@ export function About() {
             to={"about/"}
             className={buttonVariants({
               variant: "ghost",
-              className: "text-info gap-2 font-serif",
+              className: "gap-2 font-serif text-info",
             })}
           >
             Learn More <ArrowRight />
           </Link>
         </div>
 
-        <Reveal className="font-mono grid grid-cols-3 md:text-md py-10  md:px-10 text-xs rounded-md lg:w-1/2 gap-2 justify-between bg-gradient-to-l from-info to-tertiary text-white mt-2">
+        <Reveal className="md:text-md mt-2 grid grid-cols-3 justify-between gap-2 rounded-md bg-gradient-to-l from-info to-tertiary py-10 font-mono text-xs text-white md:px-10 lg:w-1/2">
           {counter.map((c) => (
             <div
               key={c.title}
               className="flex flex-col items-center justify-center p-2"
             >
               <span className="text-xl font-bold">
-                <NumberTicker value={c.count} className="text-white text-4xl" />
+                <NumberTicker value={c.count} className="text-4xl text-white" />
                 +
               </span>
-              <span className="md:text-2xl text-center">{c.title}</span>
+              <span className="text-center md:text-2xl">{c.title}</span>
             </div>
           ))}
         </Reveal>
@@ -135,28 +135,32 @@ function MiniServices() {
     >
       <Reveal>
         <div className="flex flex-col justify-center">
-          <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
+          <h1 className="text-center text-sm font-bold uppercase text-blue-500">
             The Best Medics, Doctors & Physicians
           </h1>
-          <h1 className="text-4xl mb-4 text-center text-tertiary font-bold font-mono">
+          <h1 className="mb-4 text-center font-mono text-4xl font-bold text-tertiary">
             Our Services
           </h1>
-          <div className="flex gap-4 justify-between">
+          <div className="flex justify-between gap-4">
             <div className="flex flex-col gap-2 font-mono">
               {surgeries.map((s) => (
                 <MagicContainer key={s.title}>
-                  <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden  shadow-2xl">
-                    <s.icon className="md:w-10 md:h-10 stroke-info group-hover:stroke-white" />
-                    <span className="text-gray-700 text-xs md:text-md text-center group-hover:text-white">
+                  <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
+                    <s.icon className="stroke-info group-hover:stroke-white md:h-10 md:w-10" />
+                    <span className="md:text-md text-center text-xs text-gray-700 group-hover:text-white">
                       {s.title}
                     </span>
                   </MagicCard>
                 </MagicContainer>
               ))}
-
-              <ShimmerButton background="rgb(30 58 138)">
-                View All
-              </ShimmerButton>
+              <Link to={"services/"} className="flex w-full">
+                <ShimmerButton
+                  className="h-8 w-full"
+                  background="rgb(30 58 138)"
+                >
+                  View All
+                </ShimmerButton>
+              </Link>
             </div>
             <WhyChooseUs />
           </div>
@@ -196,18 +200,18 @@ const chooseUs = [
 const WhyChooseUs = () => {
   return (
     <MagicContainer>
-      <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-        <div className="gap-4 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-4 md:p-4">
+      <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl md:p-20">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 md:p-4 lg:grid-cols-3">
           {chooseUs.map((a) => (
             <div key={a.title} className="md:mx-10 lg:mt-8">
-              <div className="flex flex-col items-center gap-4 font-mono text-center">
-                <a.icon className="md:h-14 md:w-14 stroke-info" />
+              <div className="flex flex-col items-center gap-4 text-center font-mono">
+                <a.icon className="stroke-info md:h-14 md:w-14" />
                 <span className="text-xs">{a.title}</span>
               </div>
             </div>
           ))}
         </div>
-        <p className="hidden md:block text-sm md:mt-2 lg:mt-10 lg:w-[50rem] mx-auto md:text-md  font-serif">
+        <p className="md:text-md mx-auto hidden font-serif text-sm md:mt-2 md:block lg:mt-10 lg:w-[50rem]">
           The team at Sahad Hospital consists of highly skilled and experienced
           medical professionals who are dedicated to delivering exceptional
           care. From surgeons and physicians to nurses and support staff, every

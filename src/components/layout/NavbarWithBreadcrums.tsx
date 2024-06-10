@@ -7,7 +7,7 @@ import img1 from "../../assets/images/dialysis.jpg";
 import img2 from "../../assets/images/nicu.jpg";
 import img3 from "../../assets/images/privateicu.jpg";
 import { useScrollDetect } from "@/lib/utils";
-import ShimmerButton from "../ui/simmer-button";
+import { DialogAppointmentShimmerForm } from "../forms/BookAppointmentForm";
 
 const images = [img1, img2, img3];
 
@@ -28,18 +28,14 @@ export const NavbarWithBreadcrums = () => {
       className=""
     >
       <ImagesSlider className="h-[20rem]" images={images}>
-        <div className="z-50 flex flex-col justify-center items-center">
-          <div className="text-white my-4 pl-4 flex flex-col items-center justify-center">
-            <h1 className="capitalize font-bold text-3xl">{bread}</h1>{" "}
-            <div className="flex gap-2 capitalize justify-center">
+        <div className="z-50 flex flex-col items-center justify-center">
+          <div className="my-4 flex flex-col items-center justify-center pl-4 text-white">
+            <h1 className="text-3xl font-bold capitalize">{bread}</h1>{" "}
+            <div className="flex justify-center gap-2 capitalize">
               Home <ArrowBigRight /> {bread}
             </div>
             <div className="my-4">
-              <ShimmerButton className="shadow-2xl" background="none">
-                <span className="whitespace-pre-wrap text-center font-medium leading-none md:text-lg tracking-tight text-white dark:from-white dark:to-slate-900/10">
-                  Book an Appointment
-                </span>
-              </ShimmerButton>
+              <DialogAppointmentShimmerForm label="Book an Appointment" />
             </div>
           </div>
         </div>

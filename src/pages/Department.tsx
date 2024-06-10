@@ -89,32 +89,34 @@ const departments = [
 ];
 export default function Department() {
   return (
-    <Reveal className="md:p-10 mt-14">
-      <h1 className="text-sm text-center text-blue-500 uppercase font-bold">
-        Always Caring
-      </h1>
-      <h1 className="text-4xl mb-4 text-center text-tertiary font-bold font-mono">
-        Departments
-      </h1>
-      <div className="md:flex my-10">
-        <img src={dep} className="w-[40%] hidden lg:block md:hidden" />
-        <div className="grid md:grid-cols-3">
-          {departments.map((d) => (
-            <div
-              key={d.title}
-              className="p-4 group border flex flex-col gap-4 justify-center items-center hover:bg-gradient-to-t from-tertiary to-info hover:text-white"
-            >
-              {<d.icon className="size-6 text-info group-hover:text-white" />}
-              <span className="text-xl text-center font-mono font-bold text-gray-800 group-hover:text-white">
-                {d.title}
-              </span>
-              <p className="text-center text-sm font-serif text-gray-600 group-hover:text-white">
-                {d.content}
-              </p>
-            </div>
-          ))}
+    <>
+      <Reveal className="mt-14 md:p-10">
+        <h1 className="text-center text-sm font-bold uppercase text-blue-500">
+          Always Caring
+        </h1>
+        <h1 className="mb-4 text-center font-mono text-4xl font-bold text-tertiary">
+          Departments
+        </h1>
+        <div className="my-10 md:flex">
+          <img src={dep} className="hidden w-[40%] md:hidden lg:block" />
+          <div className="grid md:grid-cols-3">
+            {departments.map((d) => (
+              <div
+                key={d.title}
+                className="group flex flex-col items-center justify-center gap-4 border from-tertiary to-info p-4 hover:bg-gradient-to-t hover:text-white"
+              >
+                {<d.icon className="size-6 text-info group-hover:text-white" />}
+                <span className="text-center font-mono text-xl font-bold text-gray-800 group-hover:text-white">
+                  {d.title}
+                </span>
+                <p className="text-center font-serif text-sm text-gray-600 group-hover:text-white">
+                  {d.content}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </Reveal>
+      </Reveal>
+    </>
   );
 }

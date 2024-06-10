@@ -6,6 +6,7 @@ import { BookAnAppointment } from "@/components/layout/BookAnAppointment";
 import { Testimonials } from "@/components/layout/Testimonials";
 import { News } from "@/components/layout/News";
 import Reveal from "@/components/Reveal";
+import GetInTouch from "@/components/layout/GetInTouch";
 
 export default function Index() {
   return (
@@ -19,7 +20,7 @@ export default function Index() {
         <BookAnAppointment />
       </Reveal>
       <Reveal className="my-10">
-        <h1 className="text-4xl mb-4 text-center text-tertiary font-bold font-mono">
+        <h1 className="mb-4 text-center font-mono text-4xl font-bold text-tertiary">
           Latest News
         </h1>
         <Reveal>
@@ -27,6 +28,9 @@ export default function Index() {
         </Reveal>
       </Reveal>
       <Testimonials />
+      <Reveal>
+        <GetInTouch />
+      </Reveal>
     </>
   );
 }

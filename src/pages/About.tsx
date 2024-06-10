@@ -6,17 +6,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MagicCard, MagicContainer } from "@/components/ui/magic-card";
 import Reveal from "@/components/Reveal";
+import GetInTouch from "@/components/layout/GetInTouch";
 
 export default function About() {
   return (
     <>
       <NavbarWithBreadcrums />
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-4 justify-center w-full p-4 container">
+      <div className="container grid w-full justify-center gap-4 p-4 md:grid-cols-1 lg:grid-cols-2">
         <Reveal>
-          <MagicContainer className={"hidden md:flex h-[30rem]"}>
+          <MagicContainer className={"hidden h-[30rem] md:flex"}>
             <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl">
               <img
-                className="hidden absolute md:block w-full h-full  rounded-md"
+                className="absolute hidden h-full w-full rounded-md md:block"
                 src={site}
                 alt=""
               />
@@ -25,11 +26,11 @@ export default function About() {
         </Reveal>
         <Reveal>
           <MagicContainer>
-            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-              <h1 className="text-sm text-blue-500 uppercase font-bold">
+            <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl md:p-20">
+              <h1 className="text-sm font-bold uppercase text-blue-500">
                 WELCOME TO SAHAD HOSPITALS
               </h1>
-              <h1 className="md:text-4xl text-xl text-center text-tertiary font-bold font-mono">
+              <h1 className="text-center font-mono text-xl font-bold text-tertiary md:text-4xl">
                 Best Care for Your Good Health
               </h1>
               <div className="mt-4">
@@ -40,9 +41,9 @@ export default function About() {
         </Reveal>
       </div>
       <Reveal>
-        <MagicContainer className={"p-4 container my-20"}>
-          <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden md:p-20 shadow-2xl">
-            <p className="font-serif md:text-md text-xl">
+        <MagicContainer className={"container my-20 p-4"}>
+          <MagicCard className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden shadow-2xl md:p-20">
+            <p className="md:text-md font-serif text-xl">
               Sahad Hospital is a reputable healthcare facility with a capacity
               of 200 beds and 7 operating theaters. Known for its commitment to
               providing high-quality healthcare services, Sahad Hospital has
@@ -56,7 +57,7 @@ export default function About() {
               hospital to offer a comprehensive range of surgical services and
               meet the diverse needs of patients.
             </p>
-            <p className="font-serif mt-10  md:text-md text-xl">
+            <p className="md:text-md mt-10 font-serif text-xl">
               The team at Sahad Hospital consists of highly skilled and
               experienced medical professionals who are dedicated to delivering
               exceptional care. From surgeons and physicians to nurses and
@@ -80,9 +81,9 @@ export default function About() {
 
       <Reveal>
         <div className="bg-gradient-to-r from-tertiary to-info">
-          <div className="container grid md:grid-cols-2 gap-4 my-8 p-4 mx-auto text-white">
+          <div className="container mx-auto my-8 grid gap-4 p-4 text-white md:grid-cols-2">
             <div className="my-4">
-              <h1 className="font-bold text-2xl font-mono">WHAT WE OFFER</h1>
+              <h1 className="font-mono text-2xl font-bold">WHAT WE OFFER</h1>
               <div className="mt-2 font-serif text-lg">
                 <p>
                   Sahad Hospitals offer cutting-edge technology, expert care,
@@ -91,32 +92,35 @@ export default function About() {
                   well-being. Your health, our priority.
                 </p>
                 <ul className="mt-4 space-y-2">
-                  <li className="flex gap-2 items-center">
+                  <li className="flex items-center gap-2">
                     <CheckCheck />
                     Family Medicine & Urgent Care
                   </li>
-                  <li className="flex gap-2 items-center">
+                  <li className="flex items-center gap-2">
                     <CheckCheck />
                     Emergency Medicine & Critical Intensive Care
                   </li>
-                  <li className="flex gap-2 items-center">
+                  <li className="flex items-center gap-2">
                     <CheckCheck />
                     Specialist Services
                   </li>
-                  <li className="flex gap-2 items-center">
+                  <li className="flex items-center gap-2">
                     <CheckCheck />
                     Interventional Radiology & Imaging Services
                   </li>
-                  <li className="flex gap-2 items-center">
+                  <li className="flex items-center gap-2">
                     <CheckCheck />
                     Laboratory Services
                   </li>
                 </ul>
               </div>
             </div>
-            <img className="w-[40rem] h-[25rem] rounded-md" src={g3} alt="" />
+            <img className="h-[25rem] w-[40rem] rounded-md" src={g3} alt="" />
           </div>
         </div>
+      </Reveal>
+      <Reveal>
+        <GetInTouch />
       </Reveal>
     </>
   );

@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 const Index = lazy(() => import("./pages/Index"));
 import { Layout } from "./components/layout/Layout";
 import { Toaster } from "sonner";
+import { NavbarWithBreadcrums } from "./components/layout/NavbarWithBreadcrums";
 
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -38,7 +39,10 @@ function App() {
           <Route
             element={
               <Suspense fallback={""}>
-                <Department />
+                <>
+                  <NavbarWithBreadcrums />
+                  <Department />
+                </>
               </Suspense>
             }
             path="department/"

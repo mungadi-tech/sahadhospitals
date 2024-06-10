@@ -18,43 +18,38 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "../ui/dialog";
+import { Hospital } from "lucide-react";
+import { Textarea } from "../ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-
-import { Calendar } from "lucide-react";
-import ShimmerButton from "../ui/simmer-button";
+} from "../ui/select";
 
 const formSchema = z.object({
   fullname: z.string().min(1, { message: "required" }).max(255),
-  email: z.string().min(1, { message: "required" }).max(255),
-  phone: z.string().min(1, { message: "required" }).max(255),
-  specialty: z.string().min(1, { message: "required" }).max(255),
-  date: z.string().min(1, { message: "required" }).max(255),
+  service: z.string().min(1, { message: "required" }).max(255),
+  rate: z.string().min(1, { message: "required" }).max(255),
+  comment: z.string().min(1, { message: "required" }).max(255),
 });
 
-("use client");
-
-export function AppointmentForm() {
+export function FeedbackForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullname: "",
-      email: "",
-      phone: "",
-      specialty: "",
-      date: "",
+      service: "",
+      rate: "",
+      comment: "",
     },
   });
 
-  // const onSubmit = (values: z.infer<typeof formSchema>) => {
-  //   console.log(values);
-  // };
+  //   function onSubmit(values: z.infer<typeof formSchema>) {
+  //     console.log(values);
+  //   }
 
   return (
     <Form {...form}>
@@ -64,7 +59,7 @@ export function AppointmentForm() {
           name="fullname"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Full Name</FormLabel>
+              <FormLabel>Full Name</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
@@ -76,42 +71,14 @@ export function AppointmentForm() {
 
         <FormField
           control={form.control}
-          name="email"
+          name="service"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="phone"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Phone Number</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="specialty"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
+              <FormLabel>Service</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a specialty" />
+                    <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
@@ -135,33 +102,56 @@ export function AppointmentForm() {
 
         <FormField
           control={form.control}
-          name="date"
+          name="rate"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Date</FormLabel>
+              <FormLabel>Service</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="exceptional">Exceptional</SelectItem>
+                  <SelectItem value="satisfied">Satisfied</SelectItem>
+                  <SelectItem value="good">Good</SelectItem>
+                  <SelectItem value="doBetter">Can do better</SelectItem>
+                  <SelectItem value="paediatrics">Not Satisfied</SelectItem>
+                  <SelectItem value="terrible">Terrible</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="comment"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Comment</FormLabel>
               <FormControl>
-                <Input type="datetime-local" {...field} />
+                <Textarea {...field} />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
         />
         <Button type="submit" disabled>
-          Schedule
+          Submit
         </Button>
       </form>
     </Form>
   );
 }
 
-export function DialogAppointmentForm() {
+export function DialogFeedbackForm() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="flex w-32 cursor-pointer items-center justify-between gap-2 rounded-md bg-tertiary p-2 text-xs text-white md:w-72 md:p-7">
-          Appointment
-          <Calendar className="md:h-14 md:w-14" />
+        <div className="flex w-32 cursor-pointer items-center justify-between gap-2 rounded-md bg-blue-500 p-2 text-xs text-white md:w-72 md:p-7">
+          Feedback <Hospital className="md:h-14 md:w-14" />
         </div>
       </DialogTrigger>
       <DialogContent className="max-w-2xl">
@@ -170,30 +160,7 @@ export function DialogAppointmentForm() {
           <DialogDescription>Schedule an appointment</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          <AppointmentForm />
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
-}
-
-export function DialogAppointmentShimmerForm({ label }: { label: string }) {
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <ShimmerButton className="hidden shadow-2xl md:flex" background="none">
-          <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 md:text-lg">
-            {label}
-          </span>
-        </ShimmerButton>
-      </DialogTrigger>
-      <DialogContent className="max-w-2xl">
-        <DialogHeader>
-          <DialogTitle>Appointment Form</DialogTitle>
-          <DialogDescription>Schedule an appointment</DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <AppointmentForm />
+          <FeedbackForm />
         </div>
       </DialogContent>
     </Dialog>
