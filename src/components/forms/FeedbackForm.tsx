@@ -156,8 +156,8 @@ export function DialogFeedbackForm() {
       </DialogTrigger>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Appointment Form</DialogTitle>
-          <DialogDescription>Schedule an appointment</DialogDescription>
+          <DialogTitle>Feed Back Form</DialogTitle>
+          <DialogDescription>Send Us a Feedback</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <FeedbackForm />

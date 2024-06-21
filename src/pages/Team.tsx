@@ -30,15 +30,11 @@ export default function Team() {
           <T image={cmac} name="Dr Mu'awiyya Zagga" title="CMAC" />
           <T image={gmb} name="Alh Nuraddeen H Mahe" title="GM Admin/HR" />
           <T
-            image={finance}
-            name="Mr Kelvin Ojonugwa Akpala"
-            title="GM Finance"
-          />
-          <T
             image={hr}
             name="Mr Kelvin Ojonugwa Akpala"
             title="GM Business Dev./Corperate Comm."
           />
+          <T image={finance} name="Adebisi A Lukman " title="GM Finance" />
         </div>
       </Reveal>
     </div>

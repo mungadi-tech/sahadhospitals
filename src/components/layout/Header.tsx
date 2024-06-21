@@ -5,7 +5,7 @@ import {
   InstagramLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { Clock, MapPinIcon, PhoneCall } from "lucide-react";
+import { Clock, FacebookIcon, MapPinIcon, PhoneCall } from "lucide-react";
 import { useScrollDetect } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -169,6 +169,13 @@ export const Header = () => {
                 </Link>
                 <Link to={"https://www.linkedin.com/in/sahad-hospitals"}>
                   <LinkedInLogoIcon className="h-6 w-6 text-white" />
+                </Link>
+                <Link
+                  to={
+                    "https://www.facebook.com/profile.php?id=61558731732489&mibextid=LQQJ4d"
+                  }
+                >
+                  <FacebookIcon className="h-6 w-6 text-white" />
                 </Link>
               </div>
             </div>

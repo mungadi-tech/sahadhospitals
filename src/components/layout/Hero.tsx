@@ -36,7 +36,7 @@ export const Hero = () => {
             transition={{ delay: 0.03, ease: "easeIn" }}
             className="font-mono text-2xl font-bold text-blue-900 md:text-6xl"
           >
-            Welcome to Sahad hospitals
+            Welcome To Sahad Hospitals
           </motion.span>
           <div className="md:mt-6">
             <Link to={"services/"}>
