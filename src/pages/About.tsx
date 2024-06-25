@@ -1,6 +1,6 @@
 import { NavbarWithBreadcrums } from "@/components/layout/NavbarWithBreadcrums";
 import { CheckCheck } from "lucide-react";
-import g3 from "../assets/images/g3.jpg";
+import g3 from "../assets/images/services.png";
 import site from "../assets/images/front.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
