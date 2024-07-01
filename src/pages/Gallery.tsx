@@ -12,11 +12,15 @@ import g9 from "../assets/images/laborward.jpg";
 import g10 from "../assets/images/s10.jpg";
 
 import g12 from "../assets/images/s12.jpg";
-import g13 from "../assets/images/GENERAL_THEATRE.png";
+import g13 from "../assets/images/g3.jpg";
 import g14 from "../assets/images/waitingarea.jpg";
 import g15 from "../assets/images/wardwork.jpg";
 import g16 from "../assets/images/lab_2.jpg";
 import g17 from "../assets/images/s7.jpg";
+import g18 from "../assets/images/ct2.jpg";
+import g19 from "../assets/images/ct4.jpg";
+import g20 from "../assets/images/services.png";
+import g21 from "../assets/images/ct5.jpg";
 
 import { GalleryCard } from "@/components/layout/GalleryCard";
 import Reveal from "@/components/Reveal";
@@ -26,7 +30,7 @@ export default function Gallery() {
     <>
       <NavbarWithBreadcrums />
       <Reveal>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-4 p-4">
+        <div className="grid gap-4 p-4 md:grid-cols-3 lg:grid-cols-4">
           <GalleryCard title="Private ICU" desc="" image={g1} />
           <GalleryCard title="Chemistry Laboratory" desc="" image={g2} />
           <GalleryCard title="X-ray Machine" desc="" image={g3} />
@@ -47,6 +51,10 @@ export default function Gallery() {
             image={g16}
           />
           <GalleryCard title=" Water Treatment System" desc="" image={g17} />
+          <GalleryCard title=" MRI Machine" desc="" image={g18} />
+          <GalleryCard title=" Water Treatment System" desc="" image={g19} />
+          <GalleryCard title=" Children's Ward" desc="" image={g20} />
+          <GalleryCard title=" Dialysis Centre" desc="" image={g21} />
         </div>
       </Reveal>
     </>

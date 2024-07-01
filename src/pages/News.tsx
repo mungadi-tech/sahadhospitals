@@ -10,6 +10,13 @@ const features = [
     href: "/news/1",
     background: <img className="absolute -right-20 -top-20 opacity-60" />,
   },
+  {
+    name: "SAHAD HOSPITAL WILL PROVIDE REVERSE MEDICAL TOURISM FOR NIGERIA / Bussiness Daily",
+    description:
+      "Dr. Shamshudeen Ahmed Aliyu, the executive vice chairman of SAHAD Hospitals in this exclusive interview with BusinessDay, Ruth Tene Natsa says rather than Nigerian elites seeking medical tourism abroad, SAHAD hospital is set to provide world standard services at less the rate……excerpts",
+    href: "/news/2",
+    background: <img className="absolute -right-20 -top-20 opacity-60" />,
+  },
 ];
 export default function NewsPage() {
   return (

@@ -1,4 +1,4 @@
-import physician from "../../assets/images/physician.png";
+import physician from "../../assets/images/upview.jpg";
 import ShimmerButton from "../ui/simmer-button";
 import { motion } from "framer-motion";
 import { useScrollDetect } from "@/lib/utils";
@@ -26,7 +26,7 @@ export const Hero = () => {
             initial={{ x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.03, ease: "easeIn" }}
-            className="w-fit rounded-full text-xs font-bold text-blue-500 md:text-sm"
+            className="w-fit rounded-full text-xs font-bold text-white md:text-sm"
           >
             AFFORDABLE HEALTHCARE FOR ALL
           </motion.span>
@@ -34,7 +34,7 @@ export const Hero = () => {
             initial={{ x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.03, ease: "easeIn" }}
-            className="font-mono text-2xl font-bold text-blue-900 md:text-6xl"
+            className="font-mono text-2xl font-bold text-cyan-200 md:text-6xl"
           >
             Welcome To Sahad Hospitals
           </motion.span>

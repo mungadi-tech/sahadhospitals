@@ -8,7 +8,6 @@ module.exports = {
   ],
   ignorePatterns: [
     "dist",
-    "convex/_generated",
     ".eslintrc.cjs",
     "tailwind.config.js",
     // There are currently ESLint errors in shadcn/ui
